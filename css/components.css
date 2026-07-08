@@ -1,0 +1,233 @@
+/* Cards "slot", badges, encadrés, tableaux, tooltips. */
+
+/* --- Slot bevel mixin (appliqué via classe) --- */
+
+.slot {
+  background: var(--surface);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+.slot--inset {
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+/* --- Boutons --- */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-5);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--surface);
+}
+
+.btn:active {
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+.btn--primary {
+  background: var(--accent-emerald);
+  color: var(--on-accent);
+  border-color: color-mix(in srgb, var(--accent-emerald) 60%, white) color-mix(in srgb, var(--accent-emerald) 60%, black) color-mix(in srgb, var(--accent-emerald) 60%, black) color-mix(in srgb, var(--accent-emerald) 60%, white);
+}
+
+/* --- Cards "slot" (sommaire accueil) --- */
+
+.card {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card--danger {
+  border-color: var(--accent-redstone) var(--accent-redstone) var(--accent-redstone) var(--accent-redstone);
+}
+
+.card__title {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card__summary {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* --- Badges --- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border-dark);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.badge--stable {
+  color: var(--accent-emerald);
+  border-color: var(--accent-emerald);
+}
+
+.badge--snapshot {
+  color: var(--accent-amethyst);
+  border-color: var(--accent-amethyst);
+}
+
+/* --- Encadrés éditoriaux --- */
+
+.callout {
+  padding: var(--space-4);
+  margin: var(--space-5) 0;
+  border-left: 4px solid;
+  background: var(--surface);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout--astuce {
+  border-left-color: var(--accent-gold);
+}
+
+.callout--danger {
+  border-left-color: var(--accent-redstone);
+}
+
+.callout--snapshot {
+  border-left-color: var(--accent-amethyst);
+}
+
+/* --- Tableaux --- */
+
+.table-scroll {
+  overflow-x: auto;
+  margin: var(--space-4) 0;
+}
+
+table {
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+thead th {
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  border-bottom: var(--slot-border-width) solid var(--border-dark);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--table-stripe);
+}
+
+/* --- Barre XP --- */
+
+.xp-bar {
+  --xp-value: 0%;
+  height: 20px;
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.xp-bar__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(180deg, var(--accent-emerald), color-mix(in srgb, var(--accent-emerald) 70%, black));
+  transition: width 700ms ease;
+}
+
+.xp-bar.is-visible .xp-bar__fill {
+  width: var(--xp-value);
+}
+
+.xp-bar__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: var(--text);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xp-bar__fill {
+    transition: none;
+  }
+}
+
+/* --- Item + tooltip --- */
+
+.item {
+  border-bottom: 1px dotted var(--text-dim);
+  cursor: help;
+}
+
+.item-tooltip {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  max-width: 260px;
+  padding: var(--space-3);
+  background: var(--surface);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  font-size: 0.85rem;
+}
+
+.item-tooltip__title {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  margin: 0 0 var(--space-1);
+}
+
+/* --- Timeline (accueil) --- */
+
+.progress-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.progress-timeline li {
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  font-size: 0.85rem;
+}
+
+.progress-timeline a {
+  text-decoration: none;
+  color: var(--text);
+}

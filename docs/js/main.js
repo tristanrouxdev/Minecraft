@@ -26,5 +26,15 @@ function initThemeToggle() {
   });
 }
 
+function markActiveNavLink() {
+  const links = document.querySelectorAll('.site-nav a');
+  const current = window.location.pathname.replace(/\/index\.html$/, '/');
+  links.forEach((link) => {
+    const linkPath = new URL(link.href).pathname.replace(/\/index\.html$/, '/');
+    if (linkPath === current) link.setAttribute('aria-current', 'page');
+  });
+}
+
 initBurger();
 initThemeToggle();
+markActiveNavLink();

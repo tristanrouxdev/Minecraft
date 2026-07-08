@@ -1,0 +1,77 @@
+/* Design tokens — thème "terminal de survie". */
+
+:root[data-theme="dark"] {
+  --bg: #17181c;            /* deepslate */
+  --surface: #232529;
+  --surface-2: #2c2f35;
+  --text: #e8e6e3;
+  --text-dim: #a8a5a0;
+  --border-light: #3d4046;  /* haut/gauche des slots */
+  --border-dark: #0d0e10;   /* bas/droite des slots */
+  --accent-emerald: #2fbf71;   /* validation, checklists, barres XP */
+  --accent-gold: #e6b31e;      /* astuces, loot */
+  --accent-redstone: #d64541;  /* danger */
+  --accent-amethyst: #9a6fd0;  /* liens, badge snapshot */
+  --accent-copper: #c47a4a;    /* accents secondaires 26.x */
+  --on-accent: #14151a;
+  --table-stripe: #1d1f23;
+  --overlay: rgba(10, 11, 13, 0.72);
+  --focus-ring: #e6b31e;
+}
+
+:root[data-theme="light"] {
+  --bg: #eef0f0;
+  --surface: #ffffff;
+  --surface-2: #e2e5e6;
+  --text: #1c1e1f;
+  --text-dim: #52565a;
+  --border-light: #ffffff;
+  --border-dark: #b3b8bb;
+  --accent-emerald: #1e8a56;
+  --accent-gold: #966a08;
+  --accent-redstone: #b93430;
+  --accent-amethyst: #6c48a8;
+  --accent-copper: #92582f;
+  --on-accent: #ffffff;
+  --table-stripe: #f4f5f6;
+  --overlay: rgba(20, 21, 23, 0.55);
+  --focus-ring: #966a08;
+}
+
+:root {
+  --font-pixel: 'Monocraft', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-body: 17px;
+  --line-height-body: 1.6;
+  --measure: 75ch;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --slot-border-width: 2px;
+  --bp-tablet: 720px;
+  --bp-desktop: 1080px;
+  --header-height: 61px;
+
+  --z-header: 100;
+  --z-nav-overlay: 90;
+  --z-toc: 10;
+  --z-tooltip: 200;
+  --z-search-results: 150;
+
+  --transition-fast: 120ms ease;
+  --transition-medium: 220ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-medium: 0ms;
+  }
+}

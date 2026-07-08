@@ -1,0 +1,303 @@
+/* Styles des widgets et calculateurs. */
+
+/* --- Recherche globale --- */
+
+.search-box {
+  position: relative;
+}
+
+.search-box__input {
+  width: 220px;
+  max-width: 38vw;
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+@media (max-width: 719px) {
+  .search-box__results {
+    width: min(320px, 90vw);
+  }
+}
+
+.search-box__results {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: var(--z-search-results);
+  width: 320px;
+  max-height: 60vh;
+  overflow-y: auto;
+  margin: 0;
+  padding: var(--space-2);
+  list-style: none;
+  background: var(--surface);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+.search-box__results[hidden] {
+  display: none;
+}
+
+.search-box__group-title {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  padding: var(--space-2) var(--space-2) 0;
+}
+
+.search-box__result {
+  display: block;
+  padding: var(--space-2);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.search-box__result:hover,
+.search-box__result.is-active {
+  background: var(--surface-2);
+  color: var(--accent-gold);
+}
+
+.search-box__noscript {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+/* --- Checklist --- */
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.checklist__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface);
+}
+
+.checklist__item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--accent-emerald);
+}
+
+.checklist__item label.is-done {
+  color: var(--text-dim);
+  text-decoration: line-through;
+}
+
+.checklist__phase {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-right: auto;
+  padding-left: var(--space-3);
+}
+
+.checklist__controls {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.checklist__export {
+  width: 100%;
+  min-height: 80px;
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  color: var(--text);
+  padding: var(--space-2);
+}
+
+/* --- Calculateur Nether --- */
+
+.nether-calc {
+  padding: var(--space-4);
+  max-width: 420px;
+}
+
+.nether-calc__row {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.nether-calc__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 0.85rem;
+}
+
+.nether-calc__field input {
+  width: 120px;
+  padding: var(--space-2);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+.nether-calc__result {
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  padding: var(--space-3);
+  background: var(--surface-2);
+  border-left: 4px solid var(--accent-copper);
+}
+
+/* --- Calculateur de minage --- */
+
+.mining-calc {
+  padding: var(--space-4);
+}
+
+.mining-calc__select {
+  padding: var(--space-2);
+  margin-bottom: var(--space-4);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+.mining-calc__summary {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.mining-calc__chart {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+.mining-calc__bar-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  font-family: var(--font-pixel);
+}
+
+.mining-calc__bar-track {
+  background: var(--surface-2);
+  height: 14px;
+}
+
+.mining-calc__bar-fill {
+  height: 100%;
+  background: var(--accent-copper);
+}
+
+/* --- Calculateur de stacks --- */
+
+.stack-calc {
+  padding: var(--space-4);
+  max-width: 420px;
+}
+
+.stack-calc__input {
+  width: 140px;
+  padding: var(--space-2);
+  margin-bottom: var(--space-3);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+.stack-calc__results {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-1) var(--space-4);
+  font-size: 0.9rem;
+}
+
+/* --- Craft viewer (grille d'établi) --- */
+
+.craft-viewer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.craft-viewer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  grid-template-rows: repeat(3, 40px);
+  gap: 3px;
+}
+
+.craft-viewer__slot {
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  position: relative;
+}
+
+.craft-viewer__arrow {
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+  color: var(--text-dim);
+}
+
+.craft-viewer__output {
+  width: 48px;
+  height: 48px;
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.craft-viewer__error {
+  color: var(--accent-redstone);
+  font-size: 0.85rem;
+}
+
+/* --- Icônes d'item placeholder --- */
+
+.item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  color: var(--on-accent);
+  background: var(--surface-2);
+  flex-shrink: 0;
+}
+
+.item-icon--common { background: #6b6f76; }
+.item-icon--uncommon { background: var(--accent-emerald); }
+.item-icon--rare { background: #3d7fd6; }
+.item-icon--epic { background: var(--accent-amethyst); }

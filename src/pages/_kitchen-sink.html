@@ -1,0 +1,83 @@
+<!-- @page title="Kitchen Sink" depth="../" -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- @include:head -->
+</head>
+<body>
+<!-- @include:header -->
+<main id="main" class="page-main-solo">
+  <h1>Kitchen sink — composants</h1>
+  <p class="page-intro">Page de démonstration temporaire. Supprimée en Phase 6.</p>
+
+  <h2>Badges de version</h2>
+  <p>
+    <span class="badge badge--stable">26.2</span>
+    <span class="badge badge--snapshot">26.3 (snapshot)</span>
+  </p>
+
+  <h2>Cards "slot"</h2>
+  <div class="card-grid">
+    <div class="slot card">
+      <h3 class="card__title">Fondations</h3>
+      <p class="card__summary">Survivre à la première nuit et s'installer durablement.</p>
+      <div class="xp-bar is-visible" style="--xp-value: 40%;">
+        <div class="xp-bar__fill"></div>
+        <span class="xp-bar__label">40%</span>
+      </div>
+    </div>
+    <div class="slot card card--danger">
+      <h3 class="card__title">Danger</h3>
+      <p class="card__summary">Variante danger d'une card slot.</p>
+    </div>
+  </div>
+
+  <h2>Encadrés éditoriaux</h2>
+  <div class="callout callout--astuce"><p><strong>Astuce.</strong> Le pissenlit doré fige la croissance d'un bébé animal.</p></div>
+  <div class="callout callout--danger"><p><strong>Danger.</strong> Le gaz des cavernes de soufre inflige la Nausée.</p></div>
+  <div class="callout callout--snapshot"><p><strong>Snapshot.</strong> Contenu 26.3, sujet à changement.</p></div>
+
+  <h2>Boutons</h2>
+  <p><a class="btn" href="#">Bouton standard</a> <a class="btn btn--primary" href="#">Bouton primaire</a></p>
+
+  <h2>Tableau zébré</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Minerai</th><th>Y optimal</th><th>Plage</th></tr></thead>
+      <tbody>
+        <tr><td>Diamant</td><td>-59</td><td>-64 à 16</td></tr>
+        <tr><td>Cuivre</td><td>48</td><td>-16 à 112</td></tr>
+        <tr><td>Débris antiques</td><td>15</td><td>8 à 22</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Item + tooltip</h2>
+  <p>Fabriquez une <span class="item" data-item="masse">Masse</span> pour infliger des dégâts de chute massifs.</p>
+
+  <h2>Icônes placeholder</h2>
+  <p>
+    <span class="item-icon item-icon--common">M</span>
+    <span class="item-icon item-icon--uncommon">C</span>
+    <span class="item-icon item-icon--rare">F</span>
+    <span class="item-icon item-icon--epic">N</span>
+  </p>
+
+  <h2>Checklist</h2>
+  <ul class="checklist">
+    <li class="checklist__item">
+      <input type="checkbox" id="ks-1">
+      <label for="ks-1">Craft d'un établi</label>
+      <span class="checklist__phase">Jour 1</span>
+    </li>
+    <li class="checklist__item">
+      <input type="checkbox" id="ks-2" checked>
+      <label for="ks-2" class="is-done">Trouver un abri</label>
+      <span class="checklist__phase">Jour 1</span>
+    </li>
+  </ul>
+</main>
+<!-- @include:footer -->
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>
