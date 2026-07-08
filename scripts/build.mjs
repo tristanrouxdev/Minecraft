@@ -127,8 +127,14 @@ function writeNoJekyll() {
   writeFileSync(join(OUT, '.nojekyll'), '');
 }
 
+function cleanOutput() {
+  if (existsSync(OUT)) rmSync(OUT, { recursive: true, force: true });
+  mkdirSync(OUT, { recursive: true });
+}
+
 function build() {
   const start = Date.now();
+  cleanOutput();
   buildPages();
   syncAssets();
   writeNoJekyll();

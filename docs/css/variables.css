@@ -10,8 +10,8 @@
   --border-dark: #0d0e10;   /* bas/droite des slots */
   --accent-emerald: #2fbf71;   /* validation, checklists, barres XP */
   --accent-gold: #e6b31e;      /* astuces, loot */
-  --accent-redstone: #d64541;  /* danger */
-  --accent-amethyst: #9a6fd0;  /* liens, badge snapshot */
+  --accent-redstone: #e27c7a;  /* danger */
+  --accent-amethyst: #b393db;  /* liens, badge snapshot */
   --accent-copper: #c47a4a;    /* accents secondaires 26.x */
   --on-accent: #14151a;
   --table-stripe: #1d1f23;
@@ -27,15 +27,15 @@
   --text-dim: #52565a;
   --border-light: #ffffff;
   --border-dark: #b3b8bb;
-  --accent-emerald: #1e8a56;
-  --accent-gold: #966a08;
+  --accent-emerald: #186e44;
+  --accent-gold: #785406;
   --accent-redstone: #b93430;
   --accent-amethyst: #6c48a8;
   --accent-copper: #92582f;
   --on-accent: #ffffff;
   --table-stripe: #f4f5f6;
   --overlay: rgba(20, 21, 23, 0.55);
-  --focus-ring: #966a08;
+  --focus-ring: #785406;
 }
 
 :root {
