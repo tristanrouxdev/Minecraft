@@ -1,40 +1,57 @@
-// Bootstrap commun : thème, burger, nav. Les widgets par page s'auto-initialisent séparément.
+// Bootstrap commun : thème, burger, nav active. Scripts classiques (pas de type="module")
+// car fetch()/import() sont bloqués par Chrome sous file:// — voir README.
 
-function initBurger() {
-  const burger = document.querySelector('[data-widget="burger"]');
-  const nav = document.getElementById('site-nav');
-  if (!burger || !nav) return;
-  burger.addEventListener('click', () => {
-    const expanded = burger.getAttribute('aria-expanded') === 'true';
-    burger.setAttribute('aria-expanded', String(!expanded));
-    nav.classList.toggle('is-open', !expanded);
-  });
-}
+// Espace de nom unique partagé entre les scripts classiques (pas d'ES modules, voir plus haut).
+window.GS = window.GS || {};
 
-function initThemeToggle() {
-  const btn = document.querySelector('[data-widget="theme-toggle"]');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try {
-      localStorage.setItem('gs_theme', next);
-    } catch (e) {
-      /* stockage indisponible, thème non persisté */
-    }
-  });
-}
+GS.getData = function (name) {
+  var el = document.getElementById('data-' + name);
+  if (!el) return null;
+  try {
+    return JSON.parse(el.textContent);
+  } catch (e) {
+    console.error('[GS.getData] JSON invalide pour "' + name + '"', e);
+    return null;
+  }
+};
 
-function markActiveNavLink() {
-  const links = document.querySelectorAll('.site-nav a');
-  const current = window.location.pathname.replace(/\/index\.html$/, '/');
-  links.forEach((link) => {
-    const linkPath = new URL(link.href).pathname.replace(/\/index\.html$/, '/');
-    if (linkPath === current) link.setAttribute('aria-current', 'page');
-  });
-}
+(function () {
+  function initBurger() {
+    var burger = document.querySelector('[data-widget="burger"]');
+    var nav = document.getElementById('site-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function () {
+      var expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open', !expanded);
+    });
+  }
 
-initBurger();
-initThemeToggle();
-markActiveNavLink();
+  function initThemeToggle() {
+    var btn = document.querySelector('[data-widget="theme-toggle"]');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme') || 'dark';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('gs_theme', next);
+      } catch (e) {
+        /* stockage indisponible, thème non persisté */
+      }
+    });
+  }
+
+  function markActiveNavLink() {
+    var links = document.querySelectorAll('.site-nav a');
+    var current = window.location.pathname.replace(/\/index\.html$/, '/');
+    links.forEach(function (link) {
+      var linkPath = new URL(link.href).pathname.replace(/\/index\.html$/, '/');
+      if (linkPath === current) link.setAttribute('aria-current', 'page');
+    });
+  }
+
+  initBurger();
+  initThemeToggle();
+  markActiveNavLink();
+})();

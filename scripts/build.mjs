@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const SRC = join(ROOT, 'src');
 const OUT = join(ROOT, 'docs');
+const DATA_DIR = join(ROOT, 'data');
 const PARTIALS_DIR = join(SRC, 'partials');
 const SYNCED_DIRS = ['css', 'js', 'data', 'assets'];
 
@@ -16,6 +17,27 @@ const INCLUDE_RE = /<!--\s*@include:(\S+?)\s*-->/g;
 const PAGE_META_RE = /<!--\s*@page\s+([^-]*?)\s*-->/;
 const ATTR_RE = /(\w+)="([^"]*)"/g;
 const VAR_RE = /\{\{(\w+)\}\}/g;
+const DATA_MARKER_RE = /<!--\s*@data\s*-->/;
+
+// fetch()/import() sur file:// sont bloqués par Chrome (CORS sur les schémas locaux) :
+// les JSON de data/ sont donc injectés en <script type="application/json"> plutôt que fetchés au runtime.
+function buildDataScripts() {
+  if (!existsSync(DATA_DIR)) return '';
+  const files = readdirSync(DATA_DIR).filter((f) => f.endsWith('.json'));
+  return files
+    .map((file) => {
+      const name = file.replace(/\.json$/, '');
+      const raw = readFileSync(join(DATA_DIR, file), 'utf8');
+      try {
+        JSON.parse(raw);
+      } catch (err) {
+        console.error(`[build] Erreur: JSON invalide dans data/${file} (${err.message})`);
+        process.exit(1);
+      }
+      return `<script type="application/json" id="data-${name}">${raw.trim()}</script>`;
+    })
+    .join('\n');
+}
 
 function listFilesRecursive(dir) {
   const out = [];
@@ -59,6 +81,7 @@ function buildPages() {
   const pageFiles = listFilesRecursive(SRC).filter(
     (f) => extname(f) === '.html' && !f.startsWith(PARTIALS_DIR + '/')
   );
+  const dataScripts = buildDataScripts();
   for (const pageFile of pageFiles) {
     const raw = readFileSync(pageFile, 'utf8');
     const vars = parsePageMeta(raw);
@@ -66,6 +89,7 @@ function buildPages() {
     html = applyVars(html, vars);
     // Retire le commentaire @page, purement instructif pour le build.
     html = html.replace(PAGE_META_RE, '');
+    html = html.replace(DATA_MARKER_RE, dataScripts);
 
     const relPath = relative(SRC, pageFile);
     const outPath = join(OUT, relPath);

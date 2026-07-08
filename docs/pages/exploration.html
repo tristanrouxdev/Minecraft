@@ -165,7 +165,431 @@
 <footer class="site-footer">
   <p>Guide Suprême du Survivant — contenu à jour pour Java 26.2 « Chaos Cubed », snapshots 26.3 balisés à part. Usage privé.</p>
 </footer>
+<script type="application/json" id="data-checklists">{
+  "fondations": [
+    { "id": "f01", "label": "Récolter du bois et fabriquer un établi", "phase": "Jour 1" },
+    { "id": "f02", "label": "Fabriquer les premiers outils (bois puis pierre)", "phase": "Jour 1" },
+    { "id": "f03", "label": "Construire ou trouver un abri avant la nuit", "phase": "Jour 1" },
+    { "id": "f04", "label": "Fabriquer un lit", "phase": "Jour 1" },
+    { "id": "f05", "label": "Chasser ou cultiver pour constituer une réserve de nourriture", "phase": "Jour 2" },
+    { "id": "f06", "label": "Miner charbon et fer, remonter un stock de base", "phase": "Jour 2-3" },
+    { "id": "f07", "label": "Fabriquer un bundle (sac)", "phase": "Jour 2-3" },
+    { "id": "f08", "label": "Fabriquer outils et armure en fer", "phase": "Jour 3-4" },
+    { "id": "f09", "label": "Construire table d'enchantement + étagères", "phase": "Jour 4-5" },
+    { "id": "f10", "label": "Craft d'une étiquette et d'un pissenlit doré (QoL 26.1)", "phase": "Jour 4-5" },
+    { "id": "f11", "label": "Explorer un camp abandonné pour du loot rapide", "phase": "Jour 5-7", "version": "26.3-snapshot" }
+  ],
+  "combat": [
+    { "id": "c01", "label": "Fabriquer une épée et une hache en fer minimum", "phase": "Équipement" },
+    { "id": "c02", "label": "Obtenir un arc ou une arbalète avec des flèches", "phase": "Équipement" },
+    { "id": "c03", "label": "Fabriquer la Masse (heavy core + breeze rod)", "phase": "Armes avancées" },
+    { "id": "c04", "label": "Obtenir ou fabriquer une Lance", "phase": "Armes avancées" },
+    { "id": "c05", "label": "Enchanter armes et armure principales", "phase": "Armes avancées" },
+    { "id": "c06", "label": "Compléter une armure en fer ou mieux", "phase": "Équipement" },
+    { "id": "c07", "label": "Préparer une arène pour le combat du Wither", "phase": "Boss" },
+    { "id": "c08", "label": "Préparer l'équipement pour l'Ender Dragon", "phase": "Boss" },
+    { "id": "c09", "label": "Savoir repérer et éviter le Warden", "phase": "Boss" },
+    { "id": "c10", "label": "Connaître le comportement du cube de soufre + TNT", "phase": "Bestiaire" }
+  ],
+  "exploration": [
+    { "id": "e01", "label": "Carte et boussole en poche", "phase": "Navigation" },
+    { "id": "e02", "label": "Élytra et fusées en réserve", "phase": "Logistique" },
+    { "id": "e03", "label": "Réserve de nourriture pour le trajet", "phase": "Logistique" },
+    { "id": "e04", "label": "Laine ou dalles de laine pour l'anti-vibration sculk", "phase": "Cités anciennes" },
+    { "id": "e05", "label": "Monture adaptée à la distance (happy ghast, nautile, dromadaire, cheval)", "phase": "Logistique" },
+    { "id": "e06", "label": "Lait en réserve pour les cavernes de soufre", "phase": "Biomes récents" },
+    { "id": "e07", "label": "Repérer une tente de camp abandonné", "phase": "Loot", "version": "26.3-snapshot" },
+    { "id": "e08", "label": "Repérer une chambre d'épreuve et son équipement conseillé", "phase": "Loot" }
+  ],
+  "dimensions": [
+    { "id": "d01", "label": "Construire le portail du Nether", "phase": "Nether" },
+    { "id": "d02", "label": "Armure ignifuge ou potion de résistance au feu", "phase": "Nether" },
+    { "id": "d03", "label": "Repérer une forteresse pour les blaze rods", "phase": "Nether" },
+    { "id": "d04", "label": "Récolter des débris antiques (Y8-22, pic Y15)", "phase": "Nether" },
+    { "id": "d05", "label": "Échanger avec les piglins (or)", "phase": "Nether" },
+    { "id": "d06", "label": "Armure de cheval en netherite si monture prévue", "phase": "Nether", "version": "1.21.11" },
+    { "id": "d07", "label": "Trianguler la position du stronghold", "phase": "End" },
+    { "id": "d08", "label": "Lits, arcs et armure prêts pour le combat du dragon", "phase": "End" },
+    { "id": "d09", "label": "Élytra et feux d'artifice pour l'après-dragon", "phase": "End" }
+  ],
+  "technique": [
+    { "id": "t01", "label": "Ferme à mobs ou à XP fonctionnelle", "phase": "Fermes" },
+    { "id": "t02", "label": "Ferme de fer fonctionnelle", "phase": "Fermes" },
+    { "id": "t03", "label": "Culture automatisée (redstone)", "phase": "Fermes" },
+    { "id": "t04", "label": "Stockage trié avec golem de cuivre", "phase": "Stockage", "version": "1.21.9" },
+    { "id": "t05", "label": "Circuit redstone de base maîtrisé (porte, piège)", "phase": "Redstone" },
+    { "id": "t06", "label": "Geyser fonctionnel (soufre concentré + magma)", "phase": "Ingénierie du soufre", "version": "26.2" },
+    { "id": "t07", "label": "Enclos d'élevage avec pissenlit doré", "phase": "Fermes" },
+    { "id": "t08", "label": "Coin confort : coussins et lit de paille", "phase": "Confort & build", "version": "26.3-snapshot" },
+    { "id": "t09", "label": "Vérifier la config cliente (Vulkan/OpenGL, Java 25)", "phase": "Performances" }
+  ]
+}</script>
+<script type="application/json" id="data-mobs">{
+  "creaking": {
+    "name": "Creaking",
+    "hp": null,
+    "biome": "Jardin pâle",
+    "danger": 3,
+    "strategy": "Immobile et invulnérable tant qu'il vous observe ; ne peut être détruit qu'en brisant son cœur grinçant à proximité, ou en l'attaquant lorsqu'il ne vous regarde pas.",
+    "drops": ["résine"],
+    "version": "1.21.4"
+  },
+  "embourbe": {
+    "name": "Embourbé",
+    "hp": null,
+    "biome": null,
+    "danger": 2,
+    "strategy": "À vérifier en jeu.",
+    "drops": [],
+    "version": "1.21"
+  },
+  "brise": {
+    "name": "Brise",
+    "hp": null,
+    "biome": null,
+    "danger": 3,
+    "strategy": "À vérifier en jeu.",
+    "drops": ["breeze_rod"],
+    "version": "1.21"
+  },
+  "desseche": {
+    "name": "Desséché",
+    "hp": null,
+    "biome": "Désert",
+    "danger": 2,
+    "strategy": "Tire des flèches de Faiblesse à distance ; contrairement au squelette classique, ne brûle pas au soleil. Rapprochez-vous pour l'achever au corps-à-corps plutôt que de l'affronter à l'arc.",
+    "drops": [],
+    "version": "1.21.11"
+  },
+  "cube_de_soufre": {
+    "name": "Cube de soufre",
+    "hp": null,
+    "biome": "Cavernes de soufre",
+    "danger": 2,
+    "strategy": "Passif : absorbe le premier bloc qui lui est présenté pour adopter l'un de ses 12 comportements (rebond sur bois, glisse sur glace, lourd sur métal, léger sur laine). Associé à de la TNT, il devient un piège explosif amorçable au redstone ou au feu (~6 s) — restez à distance des variantes chargées. Capturable au seau, attirable au pissenlit doré ou à la boule de slime pour les petits cubes.",
+    "drops": [],
+    "version": "26.2"
+  },
+  "warden": {
+    "name": "Warden",
+    "hp": null,
+    "biome": "Cité ancienne",
+    "danger": 5,
+    "strategy": "Aveugle mais détecte le bruit et les vibrations sculk. Avancez accroupi, évitez tout bruit, utilisez la laine pour étouffer les vibrations. Le combat direct est déconseillé : privilégiez la fuite ou les projectiles de diversion.",
+    "drops": [],
+    "version": null
+  },
+  "wither": {
+    "name": "Wither",
+    "hp": null,
+    "biome": null,
+    "danger": 5,
+    "strategy": "Invoqué avec 4 blocs d'âme + 3 crânes de squelette du Wither. Combattez dans une arène fermée et surélevée pour limiter les têtes explosives ; la Masse permet des combos aériens efficaces contre lui.",
+    "drops": [],
+    "version": null
+  },
+  "ender_dragon": {
+    "name": "Ender Dragon",
+    "hp": null,
+    "biome": "End",
+    "danger": 5,
+    "strategy": "Détruisez en priorité les cristaux de l'End sur les piliers (à l'arc, à distance), puis harcelez le dragon au sol ou à l'arc lors de ses piqués. Des lits posés dans l'End explosent et infligent des dégâts.",
+    "drops": [],
+    "version": null
+  },
+  "elder_guardian": {
+    "name": "Elder Guardian",
+    "hp": null,
+    "biome": "Monument océanique",
+    "danger": 4,
+    "strategy": "Inflige l'effet Minage fatigué à distance. Buvez du lait juste avant l'affrontement pour annuler l'effet, et privilégiez une arme à haut DPS.",
+    "drops": [],
+    "version": null
+  },
+  "nautile": {
+    "name": "Nautile",
+    "hp": null,
+    "biome": "Océan",
+    "danger": 1,
+    "strategy": "Monture aquatique apprivoisable au poisson-globe ; permet des déplacements rapides et sûrs sous l'eau.",
+    "drops": [],
+    "version": "1.21.11"
+  },
+  "dromadaire_momifie": {
+    "name": "Dromadaire momifié",
+    "hp": null,
+    "biome": "Désert",
+    "danger": 3,
+    "strategy": "Peut porter jusqu'à 2 cavaliers hostiles simultanément ; désarçonnez les cavaliers avant de vous occuper de la monture elle-même.",
+    "drops": [],
+    "version": "1.21.11"
+  },
+  "cheval_zombie_monte": {
+    "name": "Cheval zombie monté",
+    "hp": null,
+    "biome": null,
+    "danger": 2,
+    "strategy": "Apparaît naturellement monté par un zombie lancier. Désarçonnez le cavalier puis capturez la monture, qui ne coule plus et ne panique plus une fois montée.",
+    "drops": [],
+    "version": "1.21.11"
+  }
+}</script>
+<script type="application/json" id="data-ores">{
+  "diamant": {
+    "name": "Diamant",
+    "yMin": -64,
+    "yMax": 16,
+    "yBest": -59,
+    "note": null,
+    "distribution": [[-64, 8], [-59, 10], [-48, 6], [0, 1]]
+  },
+  "cuivre": {
+    "name": "Cuivre",
+    "yMin": null,
+    "yMax": null,
+    "yBest": 48,
+    "note": "Plage complète à vérifier en jeu.",
+    "distribution": null
+  },
+  "fer": {
+    "name": "Fer",
+    "yMin": null,
+    "yMax": null,
+    "yBest": null,
+    "note": "Distribution à double pic (deux plages de concentration) ; valeurs exactes à vérifier en jeu.",
+    "distribution": null
+  },
+  "debris_antiques": {
+    "name": "Débris antiques",
+    "yMin": 8,
+    "yMax": 22,
+    "yBest": 15,
+    "note": null,
+    "distribution": null
+  }
+}</script>
+<script type="application/json" id="data-recipes">{
+  "coussin": {
+    "name": "Coussin",
+    "grid": [null, null, null, "dalle_laine", "dalle_laine", "dalle_laine", null, null, null],
+    "output": 1,
+    "version": "26.3-snapshot",
+    "note": null
+  },
+  "pissenlit_dore": {
+    "name": "Pissenlit doré",
+    "grid": ["pepite_or", "pepite_or", "pepite_or", "pepite_or", "pissenlit", "pepite_or", "pepite_or", "pepite_or", "pepite_or"],
+    "output": 1,
+    "version": "26.1",
+    "note": null
+  },
+  "etiquette": {
+    "name": "Étiquette",
+    "grid": null,
+    "ingredients": ["papier", "pepite_or"],
+    "output": 1,
+    "version": "26.1",
+    "note": "Agencement exact de la grille à vérifier en jeu."
+  },
+  "masse": {
+    "name": "Masse",
+    "grid": null,
+    "ingredients": ["heavy_core", "breeze_rod"],
+    "output": 1,
+    "version": "1.21",
+    "note": "Agencement exact de la grille à vérifier en jeu."
+  },
+  "lit_de_paille": {
+    "name": "Lit de paille",
+    "grid": null,
+    "ingredients": ["botte_de_paille"],
+    "inputQuantity": 3,
+    "output": 4,
+    "version": "26.3-snapshot",
+    "note": "3 bottes de paille produisent 4 lits ; agencement exact de la grille à vérifier en jeu."
+  },
+  "lance": {
+    "name": "Lance",
+    "grid": null,
+    "ingredients": null,
+    "output": 1,
+    "version": "1.21.11",
+    "note": "Craftable dans tous les matériaux d'outil ; agencement exact de la grille à vérifier en jeu."
+  },
+  "bundle": {
+    "name": "Bundle",
+    "grid": null,
+    "ingredients": null,
+    "output": 1,
+    "version": null,
+    "note": "Ingrédients et agencement non détaillés dans les faits vérifiés ; à vérifier en jeu."
+  }
+}</script>
+<script type="application/json" id="data-search-index">[
+  { "page": "pages/fondations.html", "anchor": "#premiere-nuit", "title": "La première nuit, minute par minute", "keywords": ["première nuit", "bois", "établi", "abri", "outils pierre"] },
+  { "page": "pages/fondations.html", "anchor": "#dormir", "title": "Dormir", "keywords": ["lit", "dormir", "spawn", "lit de paille", "botte de paille"] },
+  { "page": "pages/fondations.html", "anchor": "#faim-saturation", "title": "Faim & saturation", "keywords": ["faim", "saturation", "nourriture", "aliments"] },
+  { "page": "pages/fondations.html", "anchor": "#progression-outils", "title": "Progression des outils", "keywords": ["outils", "bois", "pierre", "cuivre", "fer", "diamant", "netherite"] },
+  { "page": "pages/fondations.html", "anchor": "#bundles", "title": "Bundles (sacs)", "keywords": ["bundle", "sac", "inventaire"] },
+  { "page": "pages/fondations.html", "anchor": "#qol-26-1", "title": "QoL 26.1", "keywords": ["étiquette", "pissenlit doré", "qol", "confort"] },
+  { "page": "pages/fondations.html", "anchor": "#camps-abandonnes", "title": "Premier loot : camps abandonnés", "keywords": ["camp abandonné", "tente", "loot", "coffre", "tonneau"] },
+  { "page": "pages/fondations.html", "anchor": "#checklist", "title": "Checklist Jour 1 → Jour 7", "keywords": ["checklist", "fondations"] },
 
-<script type="module" src="../js/main.js"></script>
+  { "page": "pages/combat.html", "anchor": "#panorama-armes", "title": "Panorama des armes", "keywords": ["épée", "hache", "arc", "arbalète", "armes"] },
+  { "page": "pages/combat.html", "anchor": "#la-masse", "title": "La Masse", "keywords": ["masse", "mace", "heavy core", "breeze rod", "densité", "brèche", "rafale de vent"] },
+  { "page": "pages/combat.html", "anchor": "#la-lance", "title": "La Lance", "keywords": ["lance", "spear", "estoc", "élan", "brochette"] },
+  { "page": "pages/combat.html", "anchor": "#bestiaire-recent", "title": "Bestiaire récent", "keywords": ["brise", "creaking", "embourbé", "desséché", "cube de soufre", "cheval zombie", "dromadaire momifié"] },
+  { "page": "pages/combat.html", "anchor": "#boss", "title": "Boss", "keywords": ["warden", "wither", "ender dragon", "elder guardian", "boss"] },
+  { "page": "pages/combat.html", "anchor": "#armures", "title": "Armures", "keywords": ["armure", "cuivre", "netherite", "ornements"] },
+  { "page": "pages/combat.html", "anchor": "#checklist", "title": "Checklist Prêt pour le combat", "keywords": ["checklist", "combat"] },
+
+  { "page": "pages/exploration.html", "anchor": "#cartographie-navigation", "title": "Cartographie & navigation", "keywords": ["carte", "boussole", "localisation", "f3"] },
+  { "page": "pages/exploration.html", "anchor": "#chambres-epreuves", "title": "Chambres d'épreuves", "keywords": ["trial chambers", "vault", "clé", "épreuve sinistre"] },
+  { "page": "pages/exploration.html", "anchor": "#cites-anciennes", "title": "Cités anciennes", "keywords": ["cité ancienne", "sculk", "shrieker", "swift sneak", "warden"] },
+  { "page": "pages/exploration.html", "anchor": "#camps-abandonnes", "title": "Camps abandonnés", "keywords": ["camp abandonné", "tente", "loot"] },
+  { "page": "pages/exploration.html", "anchor": "#jardin-pale", "title": "Jardin pâle", "keywords": ["jardin pâle", "creaking", "eyeblossom"] },
+  { "page": "pages/exploration.html", "anchor": "#foret-tachetee", "title": "Forêt tachetée", "keywords": ["forêt tachetée", "peuplier", "polypore", "arbuste rouge"] },
+  { "page": "pages/exploration.html", "anchor": "#cavernes-de-soufre", "title": "Cavernes de soufre", "keywords": ["soufre", "cinabre", "nausée", "geyser"] },
+  { "page": "pages/exploration.html", "anchor": "#montures-logistique", "title": "Montures & logistique", "keywords": ["happy ghast", "nautile", "dromadaire", "cheval", "monture"] },
+  { "page": "pages/exploration.html", "anchor": "#checklist", "title": "Checklist Kit d'expédition", "keywords": ["checklist", "expédition"] },
+
+  { "page": "pages/dimensions.html", "anchor": "#nether-preparation", "title": "Nether — préparation", "keywords": ["nether", "portail", "anti-feu"] },
+  { "page": "pages/dimensions.html", "anchor": "#biomes-bastions-forteresses", "title": "Biomes du Nether, bastions, forteresses", "keywords": ["bastion", "forteresse", "piglin", "blaze"] },
+  { "page": "pages/dimensions.html", "anchor": "#netherite", "title": "Netherite", "keywords": ["netherite", "débris antiques", "gabarit"] },
+  { "page": "pages/dimensions.html", "anchor": "#cavalerie", "title": "Cavalerie", "keywords": ["armure de cheval", "netherite", "monture", "combat monté"] },
+  { "page": "pages/dimensions.html", "anchor": "#end", "title": "End", "keywords": ["end", "stronghold", "ender dragon", "cristaux"] },
+  { "page": "pages/dimensions.html", "anchor": "#post-dragon", "title": "Post-dragon", "keywords": ["gateway", "cité de l'end", "shulker", "élytra"] },
+  { "page": "pages/dimensions.html", "anchor": "#checklist", "title": "Checklists Nether / End", "keywords": ["checklist", "nether", "end"] },
+
+  { "page": "pages/technique.html", "anchor": "#couches-minage", "title": "Couches de minage", "keywords": ["minage", "diamant", "fer", "cuivre", "débris antiques", "y optimal"] },
+  { "page": "pages/technique.html", "anchor": "#fermes-essentielles", "title": "Fermes essentielles par phase", "keywords": ["ferme", "fer", "mobs", "xp", "cultures"] },
+  { "page": "pages/technique.html", "anchor": "#redstone-fondamentaux", "title": "Redstone fondamentaux", "keywords": ["redstone", "comparateur", "observateur"] },
+  { "page": "pages/technique.html", "anchor": "#golem-cuivre-stockage", "title": "Golem de cuivre & stockage", "keywords": ["golem de cuivre", "coffre de cuivre", "tri", "étagère"] },
+  { "page": "pages/technique.html", "anchor": "#ingenierie-soufre", "title": "Ingénierie du soufre", "keywords": ["soufre", "tnt", "geyser", "ascenseur"] },
+  { "page": "pages/technique.html", "anchor": "#confort-build", "title": "Confort & build", "keywords": ["coussin", "lit de paille", "dalle de laine", "escalier de laine"] },
+  { "page": "pages/technique.html", "anchor": "#performances-client", "title": "Performances client", "keywords": ["vulkan", "opengl", "java 25", "performances"] },
+  { "page": "pages/technique.html", "anchor": "#checklist", "title": "Checklist Base autonome", "keywords": ["checklist", "base"] },
+
+  { "page": "pages/changelog.html", "anchor": "", "title": "Changelog", "keywords": ["changelog", "versions", "snapshot"] }
+]</script>
+<script type="application/json" id="data-versions">[
+  {
+    "id": "1.21",
+    "label": "1.21 « Tricky Trials »",
+    "status": "stable",
+    "date": null,
+    "summary": "La Masse et ses enchantements exclusifs, Chambres d'épreuves, Brise, Embourbé.",
+    "entries": [
+      { "date": null, "title": "1.21", "notes": ["La Masse (heavy core + breeze rod), dégâts de chute, enchants Densité/Brèche/Rafale de vent", "Chambres d'épreuves (spawners d'épreuve, vaults)", "Nouveaux mobs : Brise, Embourbé"] }
+    ],
+    "links": ["pages/combat.html#la-masse", "pages/exploration.html#chambres-epreuves"]
+  },
+  {
+    "id": "1.21.4",
+    "label": "1.21.4",
+    "status": "stable",
+    "date": null,
+    "summary": "Jardin pâle, Creaking, cœur grinçant et résine.",
+    "entries": [
+      { "date": null, "title": "1.21.4", "notes": ["Biome Jardin pâle", "Creaking, cœur grinçant, résine"] }
+    ],
+    "links": ["pages/exploration.html#jardin-pale", "pages/combat.html#bestiaire-recent"]
+  },
+  {
+    "id": "1.21.6",
+    "label": "1.21.6",
+    "status": "stable",
+    "date": null,
+    "summary": "Happy ghast et barre de localisation.",
+    "entries": [
+      { "date": null, "title": "1.21.6", "notes": ["Happy ghast (monture aérienne)", "Barre de localisation"] }
+    ],
+    "links": ["pages/exploration.html#montures-logistique", "pages/exploration.html#cartographie-navigation"]
+  },
+  {
+    "id": "1.21.9",
+    "label": "1.21.9 « Copper Age »",
+    "status": "stable",
+    "date": null,
+    "summary": "Outils et armure en cuivre, golem de cuivre, coffres de cuivre, étagères.",
+    "entries": [
+      { "date": null, "title": "1.21.9 « Copper Age »", "notes": ["Outils et armure en cuivre", "Golem de cuivre (tri automatique vers coffres de cuivre)", "Coffres de cuivre", "Étagères"] }
+    ],
+    "links": ["pages/fondations.html#progression-outils", "pages/technique.html#golem-cuivre-stockage"]
+  },
+  {
+    "id": "1.21.11",
+    "label": "1.21.11 « Mounts of Mayhem »",
+    "status": "stable",
+    "date": "2025-12-09",
+    "summary": "La Lance, armure de cheval en netherite, nautile, dromadaire momifié, desséché, chevaux zombies montés.",
+    "entries": [
+      { "date": "2025-12-09", "title": "1.21.11 « Mounts of Mayhem »", "notes": [
+        "La Lance : estoc rapide + attaque chargée, enchant exclusif Élan, progrès « Une belle brochette »",
+        "Armure de cheval en netherite (19 points d'armure, résistance au recul)",
+        "Nautile (monture aquatique) et nautile-zombie",
+        "Dromadaire momifié (jusqu'à 2 cavaliers hostiles)",
+        "Desséché (squelette du désert, flèches de faiblesse, ne brûle pas au soleil)",
+        "Chevaux zombies à apparition naturelle montés par des zombies lanciers",
+        "Les montures ne coulent plus et ne paniquent plus"
+      ] }
+    ],
+    "links": ["pages/combat.html#la-lance", "pages/dimensions.html#cavalerie", "pages/exploration.html#montures-logistique"]
+  },
+  {
+    "id": "26.1",
+    "label": "26.1 « Tiny Takeover »",
+    "status": "stable",
+    "date": "2026-03-24",
+    "summary": "Nouveau versioning année.drop.hotfix, pissenlit doré, étiquette craftable, Java 25 requis.",
+    "entries": [
+      { "date": "2026-03-24", "title": "26.1 « Tiny Takeover »", "notes": [
+        "Nouveau schéma de version année.drop.hotfix",
+        "Refonte visuelle/sonore de 30+ bébés mobs",
+        "Pissenlit doré (8 pépites d'or + 1 pissenlit) : fige/relance la croissance des bébés animaux",
+        "Étiquette craftable (1 papier + 1 pépite)",
+        "Son de trompette du bloc musical sur cuivre (timbre selon oxydation)",
+        "Java 25 requis, 4 Go de RAM par défaut",
+        "Découpe directe de la deepslate au tailleur de pierre"
+      ] }
+    ],
+    "links": ["pages/fondations.html#qol-26-1", "pages/technique.html#performances-client"]
+  },
+  {
+    "id": "26.2",
+    "label": "26.2 « Chaos Cubed »",
+    "status": "stable",
+    "date": "2026-06-16",
+    "summary": "Cavernes de soufre, cube de soufre, blocs soufre/cinabre, geysers, moteur Vulkan expérimental.",
+    "entries": [
+      { "date": "2026-06-16", "title": "26.2 « Chaos Cubed »", "notes": [
+        "Cavernes de soufre (gaz toxique → Nausée, geysers, geysers de surface = indice de biome)",
+        "Cube de soufre : passif, absorbe un bloc → 12 archétypes de comportement ; + TNT = piège explosif (~6 s)",
+        "Blocs soufre (jaune) et cinabre (rouge) en sets complets, soufre concentré, pics de soufre",
+        "Geysers constructibles à 4 niveaux de puissance",
+        "Disque « Bounce », liste d'amis intégrée",
+        "Moteur Vulkan expérimental (repli OpenGL automatique)",
+        "Commande /unpublish, lits propulsent à 75 % de la vitesse d'impact",
+        "Araignées des cavernes à apparition naturelle"
+      ] }
+    ],
+    "links": ["pages/exploration.html#cavernes-de-soufre", "pages/technique.html#ingenierie-soufre"]
+  },
+  {
+    "id": "26.3-snapshot",
+    "label": "26.3 (snapshot)",
+    "status": "snapshot",
+    "date": null,
+    "summary": "Forêt tachetée, bois de peuplier, camps abandonnés, escaliers/dalles de laine, coussins, lit de paille.",
+    "entries": [
+      { "date": "2026-06-23", "title": "Snapshot 1", "notes": ["Forêt tachetée + set peuplier", "Camps abandonnés", "Escaliers et dalles de laine"] },
+      { "date": "2026-07-07", "title": "Snapshot 3", "notes": ["Coussins (16 couleurs)", "Lit de paille", "Recettes de potions personnalisables (data packs)"] }
+    ],
+    "links": ["pages/exploration.html#foret-tachetee", "pages/technique.html#confort-build"]
+  }
+]</script>
+
+<script src="../js/main.js"></script>
+<script src="../js/tools/checklist.js"></script>
 </body>
 </html>

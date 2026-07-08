@@ -26,6 +26,9 @@ Le site généré dans `docs/` fonctionne aussi bien ouvert directement dans un 
 - Clés `localStorage` préfixées `gs_` (`gs_theme`, `gs_hide_snapshot`, `gs_checklist_<page>`).
 - Un terme de jeu interactif est balisé `<span class="item" data-item="mace">Masse</span>` ; résolu par `tooltip.js` via `data/mobs.json` / `data/recipes.json`.
 - CSS en BEM léger, pas de `!important`, pas de `border-radius`, pas de dégradés décoratifs hors barre XP.
+- **Scripts classiques, pas de modules ES.** Chrome bloque `fetch()`, `import()` et les `<script type="module">` sous `file://` (chaque fichier local est traité comme une origine distincte, donc bloqué par CORS). Comme le site doit s'ouvrir directement en `file://`, tous les scripts sont des `<script src="...">` classiques, encapsulés en IIFE pour éviter les fuites de portée globale. Un unique espace de nom partagé `window.GS` (défini dans `main.js`) expose `GS.getData(name)`.
+- **Données JSON injectées, pas fetchées.** Pour la même raison, `scripts/build.mjs` injecte le contenu de chaque `data/*.json` dans un `<script type="application/json" id="data-<nom>">` (marqueur `<!-- @data -->` dans `footer.html`). Les widgets lisent ces blocs via `GS.getData('<nom>')` au lieu d'un `fetch()`. `data/*.json` reste la source de vérité éditable ; l'injection est régénérée à chaque build.
+- Un widget ne charge son script que sur les pages qui l'utilisent réellement (balises `<script>` explicites en fin de page, pas de chargement global).
 
 ## Mettre à jour le contenu snapshot (26.3 → futur drop)
 
