@@ -1,0 +1,34 @@
+<!-- @page title="Accueil" depth="./" -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- @include:head -->
+</head>
+<body>
+<!-- @include:header -->
+<main id="main">
+  <section class="hero">
+    <h1>Guide Suprême du Survivant</h1>
+    <p class="hero__subtitle">À jour : Java 26.2 · Snapshots 26.3</p>
+    <a class="btn btn--primary" href="pages/fondations.html">Commencer par les Fondations</a>
+  </section>
+
+  <section id="sommaire" aria-labelledby="sommaire-title">
+    <h2 id="sommaire-title">Sommaire interactif</h2>
+    <div class="card-grid" data-widget="progress-cards"></div>
+  </section>
+
+  <section id="frise" aria-labelledby="frise-title">
+    <h2 id="frise-title">Frise de progression</h2>
+    <ol class="progress-timeline"></ol>
+  </section>
+
+  <section id="quoi-de-neuf" aria-labelledby="quoi-de-neuf-title">
+    <h2 id="quoi-de-neuf-title">Quoi de neuf</h2>
+    <div data-widget="whats-new"></div>
+  </section>
+</main>
+<!-- @include:footer -->
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

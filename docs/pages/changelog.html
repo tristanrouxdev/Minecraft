@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog · Guide Suprême du Survivant</title>
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem('gs_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__bar">
+    <a class="site-header__brand" href="../index.html">Guide Suprême<span class="site-header__brand-sub">du Survivant</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-widget="burger">
+      <span class="burger__icon" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <div class="site-header__tools">
+      <div class="search-box" data-widget="search">
+        <label class="sr-only" for="global-search">Rechercher dans le guide</label>
+        <input id="global-search" class="search-box__input" type="search" placeholder="Rechercher… (ex : masse, netherite)" autocomplete="off">
+        <ul class="search-box__results" hidden></ul>
+        <noscript><span class="search-box__noscript">Recherche indisponible sans JavaScript.</span></noscript>
+      </div>
+      <button class="icon-btn" type="button" data-widget="theme-toggle" title="Basculer thème clair/sombre">
+        <span aria-hidden="true">◐</span>
+        <span class="sr-only">Changer de thème</span>
+      </button>
+      <button class="icon-btn icon-btn--snapshot" type="button" data-widget="snapshot-toggle" title="Masquer le contenu snapshot 26.3" aria-pressed="false">
+        <span aria-hidden="true">26.3</span>
+        <span class="sr-only">Afficher/masquer le contenu snapshot</span>
+      </button>
+    </div>
+  </div>
+  <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+    <a href="../index.html">Accueil</a>
+    <a href="../pages/fondations.html">Fondations</a>
+    <a href="../pages/combat.html">Combat</a>
+    <a href="../pages/exploration.html">Exploration</a>
+    <a href="../pages/dimensions.html">Dimensions</a>
+    <a href="../pages/technique.html">Technique</a>
+    <a href="../pages/changelog.html">Changelog</a>
+  </nav>
+</header>
+
+<main id="main">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Changelog</nav>
+  <h1>Changelog</h1>
+  <p class="page-intro">Historique des versions couvertes par ce guide, de 1.21 à 26.3.</p>
+
+  <div class="callout callout--snapshot">
+    <p>Le contenu 26.3 est en snapshot et peut changer.</p>
+  </div>
+
+  <div data-widget="changelog">
+    <noscript>
+      <p>Cette page est générée dynamiquement. Sans JavaScript, consultez directement <a href="../data/versions.json">data/versions.json</a>.</p>
+    </noscript>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>Guide Suprême du Survivant — contenu à jour pour Java 26.2 « Chaos Cubed », snapshots 26.3 balisés à part. Usage privé.</p>
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

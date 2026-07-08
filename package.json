@@ -1,0 +1,10 @@
+{
+  "name": "guide-survivant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Guide de survie exhaustif pour Minecraft Java 26.2, généré en HTML/CSS/JS vanilla.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch"
+  }
+}

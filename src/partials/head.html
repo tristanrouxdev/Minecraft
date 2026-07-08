@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}} · Guide Suprême du Survivant</title>
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem('gs_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+<link rel="stylesheet" href="{{depth}}css/variables.css">
+<link rel="stylesheet" href="{{depth}}css/base.css">
+<link rel="stylesheet" href="{{depth}}css/layout.css">
+<link rel="stylesheet" href="{{depth}}css/components.css">
+<link rel="stylesheet" href="{{depth}}css/tools.css">

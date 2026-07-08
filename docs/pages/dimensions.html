@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimensions · Guide Suprême du Survivant</title>
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem('gs_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__bar">
+    <a class="site-header__brand" href="../index.html">Guide Suprême<span class="site-header__brand-sub">du Survivant</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-widget="burger">
+      <span class="burger__icon" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <div class="site-header__tools">
+      <div class="search-box" data-widget="search">
+        <label class="sr-only" for="global-search">Rechercher dans le guide</label>
+        <input id="global-search" class="search-box__input" type="search" placeholder="Rechercher… (ex : masse, netherite)" autocomplete="off">
+        <ul class="search-box__results" hidden></ul>
+        <noscript><span class="search-box__noscript">Recherche indisponible sans JavaScript.</span></noscript>
+      </div>
+      <button class="icon-btn" type="button" data-widget="theme-toggle" title="Basculer thème clair/sombre">
+        <span aria-hidden="true">◐</span>
+        <span class="sr-only">Changer de thème</span>
+      </button>
+      <button class="icon-btn icon-btn--snapshot" type="button" data-widget="snapshot-toggle" title="Masquer le contenu snapshot 26.3" aria-pressed="false">
+        <span aria-hidden="true">26.3</span>
+        <span class="sr-only">Afficher/masquer le contenu snapshot</span>
+      </button>
+    </div>
+  </div>
+  <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+    <a href="../index.html">Accueil</a>
+    <a href="../pages/fondations.html">Fondations</a>
+    <a href="../pages/combat.html">Combat</a>
+    <a href="../pages/exploration.html">Exploration</a>
+    <a href="../pages/dimensions.html">Dimensions</a>
+    <a href="../pages/technique.html">Technique</a>
+    <a href="../pages/changelog.html">Changelog</a>
+  </nav>
+</header>
+
+<main id="main">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Dimensions</nav>
+  <h1>Dimensions</h1>
+  <p class="page-intro">Contenu à venir.</p>
+  <nav class="toc" data-widget="toc" aria-label="Sommaire de la page"></nav>
+
+  <article>
+    <section id="nether-preparation">
+      <h2>Nether — préparation</h2>
+    </section>
+    <section id="biomes-bastions-forteresses">
+      <h2>Biomes du Nether, bastions, forteresses</h2>
+    </section>
+    <section id="netherite">
+      <h2>Netherite</h2>
+    </section>
+    <section id="cavalerie">
+      <h2>Cavalerie</h2>
+    </section>
+    <section id="end">
+      <h2>End</h2>
+    </section>
+    <section id="post-dragon">
+      <h2>Post-dragon</h2>
+    </section>
+    <section id="checklist" data-widget="checklist" data-checklist-page="dimensions">
+      <h2>Checklists « Prêt pour le Nether » / « Prêt pour l'End »</h2>
+      <noscript><p>Activez JavaScript pour cocher les items de cette checklist.</p></noscript>
+    </section>
+  </article>
+</main>
+<footer class="site-footer">
+  <p>Guide Suprême du Survivant — contenu à jour pour Java 26.2 « Chaos Cubed », snapshots 26.3 balisés à part. Usage privé.</p>
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

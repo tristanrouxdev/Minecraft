@@ -1,0 +1,34 @@
+<header class="site-header">
+  <div class="site-header__bar">
+    <a class="site-header__brand" href="{{depth}}index.html">Guide Suprême<span class="site-header__brand-sub">du Survivant</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-nav" data-widget="burger">
+      <span class="burger__icon" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <div class="site-header__tools">
+      <div class="search-box" data-widget="search">
+        <label class="sr-only" for="global-search">Rechercher dans le guide</label>
+        <input id="global-search" class="search-box__input" type="search" placeholder="Rechercher… (ex : masse, netherite)" autocomplete="off">
+        <ul class="search-box__results" hidden></ul>
+        <noscript><span class="search-box__noscript">Recherche indisponible sans JavaScript.</span></noscript>
+      </div>
+      <button class="icon-btn" type="button" data-widget="theme-toggle" title="Basculer thème clair/sombre">
+        <span aria-hidden="true">◐</span>
+        <span class="sr-only">Changer de thème</span>
+      </button>
+      <button class="icon-btn icon-btn--snapshot" type="button" data-widget="snapshot-toggle" title="Masquer le contenu snapshot 26.3" aria-pressed="false">
+        <span aria-hidden="true">26.3</span>
+        <span class="sr-only">Afficher/masquer le contenu snapshot</span>
+      </button>
+    </div>
+  </div>
+  <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+    <a href="{{depth}}index.html">Accueil</a>
+    <a href="{{depth}}pages/fondations.html">Fondations</a>
+    <a href="{{depth}}pages/combat.html">Combat</a>
+    <a href="{{depth}}pages/exploration.html">Exploration</a>
+    <a href="{{depth}}pages/dimensions.html">Dimensions</a>
+    <a href="{{depth}}pages/technique.html">Technique</a>
+    <a href="{{depth}}pages/changelog.html">Changelog</a>
+  </nav>
+</header>
