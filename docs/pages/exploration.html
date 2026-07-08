@@ -31,7 +31,7 @@
       <span class="sr-only">Menu</span>
     </button>
     <div class="site-header__tools">
-      <div class="search-box" data-widget="search">
+      <div class="search-box" data-widget="search" data-depth="../">
         <label class="sr-only" for="global-search">Rechercher dans le guide</label>
         <input id="global-search" class="search-box__input" type="search" placeholder="Rechercher… (ex : masse, netherite)" autocomplete="off">
         <ul class="search-box__results" hidden></ul>
@@ -97,7 +97,7 @@
     </section>
 
     <section id="camps-abandonnes" data-version="26.3-snapshot">
-      <h2>Camps abandonnés</h2>
+      <h2 data-version="26.3-snapshot">Camps abandonnés</h2>
       <p>Nouveauté du snapshot 26.3. Repérables à leurs tentes montées en escaliers et dalles de laine, avec des variantes selon le biome de génération.</p>
       <div class="table-scroll">
         <table>
@@ -590,6 +590,10 @@
 ]</script>
 
 <script src="../js/main.js"></script>
+<script src="../js/components/search.js"></script>
+<script src="../js/components/version-badge.js"></script>
+<script src="../js/components/toc.js"></script>
+<script src="../js/components/tooltip.js"></script>
 <script src="../js/tools/checklist.js"></script>
 </body>
 </html>

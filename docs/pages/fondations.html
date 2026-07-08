@@ -31,7 +31,7 @@
       <span class="sr-only">Menu</span>
     </button>
     <div class="site-header__tools">
-      <div class="search-box" data-widget="search">
+      <div class="search-box" data-widget="search" data-depth="../">
         <label class="sr-only" for="global-search">Rechercher dans le guide</label>
         <input id="global-search" class="search-box__input" type="search" placeholder="Rechercher… (ex : masse, netherite)" autocomplete="off">
         <ul class="search-box__results" hidden></ul>
@@ -83,6 +83,9 @@
       </div>
       <div class="callout callout--astuce">
         <p><strong>Astuce.</strong> En cas de doute, un trou de 1×2 creusé à flanc de colline et rebouché derrière vous reste l'abri le plus rapide à sécuriser.</p>
+      </div>
+      <div data-widget="mc-clock">
+        <noscript><p>Activez JavaScript pour afficher l'horloge simulée.</p></noscript>
       </div>
     </section>
 
@@ -142,6 +145,10 @@
     <section id="bundles">
       <h2>Bundles (sacs)</h2>
       <p>Un <span class="item" data-item="bundle">bundle</span> regroupe plusieurs objets différents dans un seul emplacement d'inventaire, à condition que leur volume cumulé ne dépasse pas l'équivalent d'une pile (64 unités mélangées). Très utile pour ramener du loot varié sans multiplier les emplacements utilisés.</p>
+      <p>Calculateur rapide pour convertir une quantité d'objets en piles et en contenants :</p>
+      <div data-widget="stack-calc">
+        <noscript><p>Activez JavaScript pour utiliser le calculateur de piles.</p></noscript>
+      </div>
     </section>
 
     <section id="qol-26-1">
@@ -157,7 +164,7 @@
     </section>
 
     <section id="camps-abandonnes" data-version="26.3-snapshot">
-      <h2>Premier loot : camps abandonnés</h2>
+      <h2 data-version="26.3-snapshot">Premier loot : camps abandonnés</h2>
       <p>Nouveauté du snapshot 26.3, les camps abandonnés se reconnaissent à leurs tentes montées en escaliers et dalles de laine, avec des variantes visuelles selon le biome où ils apparaissent.</p>
       <div class="table-scroll">
         <table>
@@ -610,6 +617,12 @@
 ]</script>
 
 <script src="../js/main.js"></script>
+<script src="../js/components/search.js"></script>
+<script src="../js/components/version-badge.js"></script>
+<script src="../js/components/toc.js"></script>
+<script src="../js/components/tooltip.js"></script>
+<script src="../js/components/clock.js"></script>
+<script src="../js/tools/stack-calc.js"></script>
 <script src="../js/tools/checklist.js"></script>
 </body>
 </html>

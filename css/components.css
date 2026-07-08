@@ -85,6 +85,10 @@
   border-color: var(--accent-emerald);
 }
 
+.is-hidden-snapshot {
+  display: none;
+}
+
 .badge--snapshot {
   color: var(--accent-amethyst);
   border-color: var(--accent-amethyst);
@@ -230,4 +234,22 @@ tbody tr:nth-child(even) {
 .progress-timeline a {
   text-decoration: none;
   color: var(--text);
+}
+
+/* --- Changelog --- */
+
+.changelog-timeline {
+  border-left: var(--slot-border-width) solid var(--border-dark);
+  padding-left: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.changelog-entry {
+  padding: var(--space-4);
+}
+
+.changelog-entry h2 {
+  margin-top: 0;
 }
