@@ -1,1 +1,59 @@
-{}
+{
+  "fondations": [
+    { "id": "f01", "label": "Récolter du bois et fabriquer un établi", "phase": "Jour 1" },
+    { "id": "f02", "label": "Fabriquer les premiers outils (bois puis pierre)", "phase": "Jour 1" },
+    { "id": "f03", "label": "Construire ou trouver un abri avant la nuit", "phase": "Jour 1" },
+    { "id": "f04", "label": "Fabriquer un lit", "phase": "Jour 1" },
+    { "id": "f05", "label": "Chasser ou cultiver pour constituer une réserve de nourriture", "phase": "Jour 2" },
+    { "id": "f06", "label": "Miner charbon et fer, remonter un stock de base", "phase": "Jour 2-3" },
+    { "id": "f07", "label": "Fabriquer un bundle (sac)", "phase": "Jour 2-3" },
+    { "id": "f08", "label": "Fabriquer outils et armure en fer", "phase": "Jour 3-4" },
+    { "id": "f09", "label": "Construire table d'enchantement + étagères", "phase": "Jour 4-5" },
+    { "id": "f10", "label": "Craft d'une étiquette et d'un pissenlit doré (QoL 26.1)", "phase": "Jour 4-5" },
+    { "id": "f11", "label": "Explorer un camp abandonné pour du loot rapide", "phase": "Jour 5-7", "version": "26.3-snapshot" }
+  ],
+  "combat": [
+    { "id": "c01", "label": "Fabriquer une épée et une hache en fer minimum", "phase": "Équipement" },
+    { "id": "c02", "label": "Obtenir un arc ou une arbalète avec des flèches", "phase": "Équipement" },
+    { "id": "c03", "label": "Fabriquer la Masse (heavy core + breeze rod)", "phase": "Armes avancées" },
+    { "id": "c04", "label": "Obtenir ou fabriquer une Lance", "phase": "Armes avancées" },
+    { "id": "c05", "label": "Enchanter armes et armure principales", "phase": "Armes avancées" },
+    { "id": "c06", "label": "Compléter une armure en fer ou mieux", "phase": "Équipement" },
+    { "id": "c07", "label": "Préparer une arène pour le combat du Wither", "phase": "Boss" },
+    { "id": "c08", "label": "Préparer l'équipement pour l'Ender Dragon", "phase": "Boss" },
+    { "id": "c09", "label": "Savoir repérer et éviter le Warden", "phase": "Boss" },
+    { "id": "c10", "label": "Connaître le comportement du cube de soufre + TNT", "phase": "Bestiaire" }
+  ],
+  "exploration": [
+    { "id": "e01", "label": "Carte et boussole en poche", "phase": "Navigation" },
+    { "id": "e02", "label": "Élytra et fusées en réserve", "phase": "Logistique" },
+    { "id": "e03", "label": "Réserve de nourriture pour le trajet", "phase": "Logistique" },
+    { "id": "e04", "label": "Laine ou dalles de laine pour l'anti-vibration sculk", "phase": "Cités anciennes" },
+    { "id": "e05", "label": "Monture adaptée à la distance (happy ghast, nautile, dromadaire, cheval)", "phase": "Logistique" },
+    { "id": "e06", "label": "Lait en réserve pour les cavernes de soufre", "phase": "Biomes récents" },
+    { "id": "e07", "label": "Repérer une tente de camp abandonné", "phase": "Loot", "version": "26.3-snapshot" },
+    { "id": "e08", "label": "Repérer une chambre d'épreuve et son équipement conseillé", "phase": "Loot" }
+  ],
+  "dimensions": [
+    { "id": "d01", "label": "Construire le portail du Nether", "phase": "Nether" },
+    { "id": "d02", "label": "Armure ignifuge ou potion de résistance au feu", "phase": "Nether" },
+    { "id": "d03", "label": "Repérer une forteresse pour les blaze rods", "phase": "Nether" },
+    { "id": "d04", "label": "Récolter des débris antiques (Y8-22, pic Y15)", "phase": "Nether" },
+    { "id": "d05", "label": "Échanger avec les piglins (or)", "phase": "Nether" },
+    { "id": "d06", "label": "Armure de cheval en netherite si monture prévue", "phase": "Nether", "version": "1.21.11" },
+    { "id": "d07", "label": "Trianguler la position du stronghold", "phase": "End" },
+    { "id": "d08", "label": "Lits, arcs et armure prêts pour le combat du dragon", "phase": "End" },
+    { "id": "d09", "label": "Élytra et feux d'artifice pour l'après-dragon", "phase": "End" }
+  ],
+  "technique": [
+    { "id": "t01", "label": "Ferme à mobs ou à XP fonctionnelle", "phase": "Fermes" },
+    { "id": "t02", "label": "Ferme de fer fonctionnelle", "phase": "Fermes" },
+    { "id": "t03", "label": "Culture automatisée (redstone)", "phase": "Fermes" },
+    { "id": "t04", "label": "Stockage trié avec golem de cuivre", "phase": "Stockage", "version": "1.21.9" },
+    { "id": "t05", "label": "Circuit redstone de base maîtrisé (porte, piège)", "phase": "Redstone" },
+    { "id": "t06", "label": "Geyser fonctionnel (soufre concentré + magma)", "phase": "Ingénierie du soufre", "version": "26.2" },
+    { "id": "t07", "label": "Enclos d'élevage avec pissenlit doré", "phase": "Fermes" },
+    { "id": "t08", "label": "Coin confort : coussins et lit de paille", "phase": "Confort & build", "version": "26.3-snapshot" },
+    { "id": "t09", "label": "Vérifier la config cliente (Vulkan/OpenGL, Java 25)", "phase": "Performances" }
+  ]
+}

@@ -10,30 +10,118 @@
   <div class="page-body">
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Fondations</nav>
   <h1>Fondations</h1>
-  <p class="page-intro">Contenu à venir.</p>
+  <p class="page-intro">De l'arrivée sur la carte à une base autosuffisante : la première semaine de survie, minute par minute, avec les bons réflexes pour ne pas la perdre bêtement.</p>
 
   <article>
     <section id="premiere-nuit">
       <h2>La première nuit, minute par minute</h2>
+      <p>Les dix premières minutes conditionnent le reste de la partie. L'objectif n'est pas de tout optimiser mais d'arriver à la tombée de la nuit avec un abri fermé.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Minute</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>0–2</td><td>Repérer un arbre proche, casser 4-5 blocs de bois.</td></tr>
+            <tr><td>2–3</td><td>Fabriquer une table de craft (établi).</td></tr>
+            <tr><td>3–5</td><td>Fabriquer pioche et hache en bois, puis retourner chercher du bois si besoin.</td></tr>
+            <tr><td>5–7</td><td>Miner de la pierre pour passer aux outils en pierre (plus durables, plus rapides).</td></tr>
+            <tr><td>7–9</td><td>Repérer ou creuser un abri : trou de secours, surplomb rocheux, ou petite cabane de fortune.</td></tr>
+            <tr><td>9–10</td><td>Fermer l'entrée avant la tombée du jour. Un simple bloc de terre suffit.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--astuce">
+        <p><strong>Astuce.</strong> En cas de doute, un trou de 1×2 creusé à flanc de colline et rebouché derrière vous reste l'abri le plus rapide à sécuriser.</p>
+      </div>
     </section>
+
     <section id="dormir">
       <h2>Dormir</h2>
+      <p>Dormir passe la nuit et fixe votre point de réapparition, mais toutes les solutions de couchage ne se valent pas.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Couchage</th><th>Définit le spawn</th><th>Usage</th><th>Restrictions</th></tr></thead>
+          <tbody>
+            <tr><td>Lit classique</td><td>Oui</td><td>Illimité</td><td>Explose hors Overworld</td></tr>
+            <tr><td data-version="26.3-snapshot"><span class="item" data-item="lit_de_paille">Lit de paille</span></td><td data-version="26.3-snapshot">Non</td><td data-version="26.3-snapshot">Usage unique</td><td data-version="26.3-snapshot">Inutilisable au Nether/End</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--snapshot" data-version="26.3-snapshot">
+        <p><strong>Snapshot 26.3.</strong> Le lit de paille se fabrique à partir de 3 bottes de paille pour 4 lits. Il permet de passer la nuit sans définir de point de réapparition — pratique lors d'une expédition longue où l'on ne souhaite pas déplacer son spawn.</p>
+      </div>
     </section>
+
     <section id="faim-saturation">
       <h2>Faim &amp; saturation</h2>
+      <p>La barre de faim se vide avec le temps et l'effort ; sous un certain seuil, la régénération naturelle s'arrête, puis les dégâts de faim apparaissent. La saturation est une réserve invisible qui retarde la baisse de la faim visible.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Phase de jeu</th><th>Aliments recommandés</th></tr></thead>
+          <tbody>
+            <tr><td>Jour 1-2</td><td>Pain, viande cuite trouvée en chassant</td></tr>
+            <tr><td>Début de ferme</td><td>Carottes, pommes de terre, betteraves</td></tr>
+            <tr><td>Base établie</td><td>Ragoût, viande dorée, cultures automatisées</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--danger">
+        <p><strong>Piège.</strong> Manger de la viande crue ou du poulet non cuit expose aux intoxications ; privilégiez toujours la cuisson au four ou à la broche.</p>
+      </div>
     </section>
+
     <section id="progression-outils">
       <h2>Progression des outils</h2>
+      <p>Chaque palier de matériau améliore vitesse de minage, dégâts et durabilité, et débloque l'accès au palier suivant.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Matériau</th><th>Débloque</th><th>Remarque</th></tr></thead>
+          <tbody>
+            <tr><td>Bois</td><td>Pierre</td><td>Point de départ, faible durabilité</td></tr>
+            <tr><td>Pierre</td><td>Fer (via charbon)</td><td>Bon rapport rapidité/coût</td></tr>
+            <tr data-version="1.21.9"><td>Cuivre</td><td>—</td><td>Palier alternatif introduit en 1.21.9, entre pierre et fer</td></tr>
+            <tr><td>Fer</td><td>Diamant, enchantement</td><td>Premier palier minant l'obsidienne</td></tr>
+            <tr><td>Diamant</td><td>Netherite</td><td>Nécessite un gabarit + un lingot de netherite à la table de forge</td></tr>
+            <tr><td>Netherite</td><td>—</td><td>Palier final, résiste à la lave, ne se consume pas</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+
     <section id="bundles">
       <h2>Bundles (sacs)</h2>
+      <p>Un <span class="item" data-item="bundle">bundle</span> regroupe plusieurs objets différents dans un seul emplacement d'inventaire, à condition que leur volume cumulé ne dépasse pas l'équivalent d'une pile (64 unités mélangées). Très utile pour ramener du loot varié sans multiplier les emplacements utilisés.</p>
     </section>
+
     <section id="qol-26-1">
       <h2>QoL 26.1</h2>
+      <p>La mise à jour 26.1 « Tiny Takeover » a ajouté deux objets de confort qui simplifient la vie de tous les jours.</p>
+      <ul>
+        <li><span class="item" data-item="etiquette">Étiquette</span> craftable (1 papier + 1 pépite d'or) — plus besoin de compter sur le loot de cités anciennes/manoirs ou le commerce de bibliothécaire.</li>
+        <li><span class="item" data-item="pissenlit_dore">Pissenlit doré</span> (8 pépites d'or + 1 pissenlit) : fige la croissance d'un bébé animal, ou la relance s'il était déjà figé. Inopérant sur les bébés morts-vivants, piglins ou villageois.</li>
+      </ul>
+      <div class="callout callout--astuce">
+        <p><strong>Astuce.</strong> Le pissenlit doré est l'outil idéal pour conserver des bébés animaux « d'exposition » dans un enclos sans qu'ils ne grandissent.</p>
+      </div>
     </section>
+
     <section id="camps-abandonnes" data-version="26.3-snapshot">
       <h2>Premier loot : camps abandonnés</h2>
+      <p>Nouveauté du snapshot 26.3, les camps abandonnés se reconnaissent à leurs tentes montées en escaliers et dalles de laine, avec des variantes visuelles selon le biome où ils apparaissent.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Contenant</th><th>Contenu typique</th></tr></thead>
+          <tbody>
+            <tr><td>Tonneau</td><td>Loot commun, parfois de la toile d'araignée</td></tr>
+            <tr><td>Coffre commun</td><td>Armes/armures en cuivre, seaux, boussoles, cartes, fusées</td></tr>
+            <tr><td>Coffre secret</td><td>Fer, diamants, or, potions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--snapshot">
+        <p><strong>Snapshot 26.3.</strong> Contenu et taux de loot sujets à changement avant la sortie stable.</p>
+      </div>
     </section>
+
     <section id="checklist" data-widget="checklist" data-checklist-page="fondations">
       <h2>Checklist « Jour 1 → Jour 7 »</h2>
       <noscript><p>Activez JavaScript pour cocher les items de cette checklist.</p></noscript>

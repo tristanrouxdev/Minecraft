@@ -1,1 +1,57 @@
-{}
+{
+  "coussin": {
+    "name": "Coussin",
+    "grid": [null, null, null, "dalle_laine", "dalle_laine", "dalle_laine", null, null, null],
+    "output": 1,
+    "version": "26.3-snapshot",
+    "note": null
+  },
+  "pissenlit_dore": {
+    "name": "Pissenlit doré",
+    "grid": ["pepite_or", "pepite_or", "pepite_or", "pepite_or", "pissenlit", "pepite_or", "pepite_or", "pepite_or", "pepite_or"],
+    "output": 1,
+    "version": "26.1",
+    "note": null
+  },
+  "etiquette": {
+    "name": "Étiquette",
+    "grid": null,
+    "ingredients": ["papier", "pepite_or"],
+    "output": 1,
+    "version": "26.1",
+    "note": "Agencement exact de la grille à vérifier en jeu."
+  },
+  "masse": {
+    "name": "Masse",
+    "grid": null,
+    "ingredients": ["heavy_core", "breeze_rod"],
+    "output": 1,
+    "version": "1.21",
+    "note": "Agencement exact de la grille à vérifier en jeu."
+  },
+  "lit_de_paille": {
+    "name": "Lit de paille",
+    "grid": null,
+    "ingredients": ["botte_de_paille"],
+    "inputQuantity": 3,
+    "output": 4,
+    "version": "26.3-snapshot",
+    "note": "3 bottes de paille produisent 4 lits ; agencement exact de la grille à vérifier en jeu."
+  },
+  "lance": {
+    "name": "Lance",
+    "grid": null,
+    "ingredients": null,
+    "output": 1,
+    "version": "1.21.11",
+    "note": "Craftable dans tous les matériaux d'outil ; agencement exact de la grille à vérifier en jeu."
+  },
+  "bundle": {
+    "name": "Bundle",
+    "grid": null,
+    "ingredients": null,
+    "output": 1,
+    "version": null,
+    "note": "Ingrédients et agencement non détaillés dans les faits vérifiés ; à vérifier en jeu."
+  }
+}

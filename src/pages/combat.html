@@ -10,27 +10,134 @@
   <div class="page-body">
   <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Combat</nav>
   <h1>Combat</h1>
-  <p class="page-intro">Contenu à venir.</p>
+  <p class="page-intro">Des armes de base aux boss de fin de partie : panorama des armes disponibles, bestiaire des mobs récents et tactiques pour chaque affrontement majeur.</p>
 
   <article>
     <section id="panorama-armes">
       <h2>Panorama des armes</h2>
+      <p>Les valeurs chiffrées précises (dégâts, vitesse) varient selon le contexte d'enchantement et ne sont pas reproduites ici sans confirmation en jeu ; le tableau ci-dessous compare plutôt les usages.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Arme</th><th>Profil</th><th>Enchant exclusif</th><th>Point fort</th></tr></thead>
+          <tbody>
+            <tr><td>Épée</td><td>Corps-à-corps rapide</td><td>—</td><td>Polyvalence, balayage de groupes faibles</td></tr>
+            <tr><td>Hache</td><td>Corps-à-corps lourd</td><td>—</td><td>Dégâts élevés au coup, désactive les boucliers</td></tr>
+            <tr><td>Arc</td><td>Distance, charge variable</td><td>—</td><td>Précision, kite à longue portée</td></tr>
+            <tr><td>Arbalète</td><td>Distance, tir chargé à l'avance</td><td>—</td><td>Double projectile, tirs de feu d'artifice</td></tr>
+            <tr><td>Trident</td><td>Corps-à-corps ou lancer</td><td>Loyauté, Canalisation</td><td>Combat aquatique, retour automatique</td></tr>
+            <tr><td><span class="item" data-item="masse">Masse</span></td><td>Dégâts de chute amplifiés</td><td>Densité, Brèche, Rafale de vent</td><td>Burst massif en piqué</td></tr>
+            <tr><td><span class="item" data-item="lance">Lance</span></td><td>Estoc rapide ou charge</td><td>Élan</td><td>Multi-cibles, combat monté</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+
     <section id="la-masse">
       <h2>La Masse</h2>
+      <p>Introduite en 1.21, la Masse se fabrique avec un <em>heavy core</em> et une tige de brise (<em>breeze rod</em>). Son intérêt principal : convertir les dégâts de chute en dégâts infligés à la cible sous vous au moment de l'impact.</p>
+      <ul>
+        <li><strong>Densité</strong> — augmente les dégâts supplémentaires par bloc de chute.</li>
+        <li><strong>Brèche</strong> — réduit l'efficacité de l'armure adverse.</li>
+        <li><strong>Rafale de vent</strong> — propulse le joueur vers le haut après l'impact, permettant d'enchaîner les sauts.</li>
+      </ul>
+      <div class="callout callout--danger">
+        <p><strong>Limite.</strong> Sans hauteur de chute, la Masse retombe à des dégâts de corps-à-corps ordinaires : elle exige de l'espace vertical pour être efficace.</p>
+      </div>
     </section>
+
     <section id="la-lance">
       <h2>La Lance</h2>
+      <p>Ajoutée en 1.21.11 « Mounts of Mayhem », la Lance se fabrique dans n'importe quel matériau d'outil et propose deux modes d'attaque.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Mode</th><th>Comportement</th></tr></thead>
+          <tbody>
+            <tr><td>Estoc</td><td>Rapide, dégâts faibles, recul, touche plusieurs cibles alignées, nécessite une distance minimale</td></tr>
+            <tr><td>Attaque chargée</td><td>Dégâts dépendant du matériau, de l'angle et de la vitesse au moment de l'impact</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>L'enchantement exclusif <strong>Élan</strong> profite particulièrement des charges lancées en vol à l'élytre ou à cheval. Le progrès « Une belle brochette » récompense l'estoc réussi sur 5 cibles en une seule charge.</p>
+      <p>Obtention : craftable dans tous les matériaux, portée naturellement par certains zombies et piglins, ou trouvable dans les ruines océaniques, les villages, les trésors enfouis, les vestiges de bastion et les cités de l'End.</p>
+      <div class="callout callout--astuce">
+        <p><strong>Synergie.</strong> Charger une attaque de Lance en piqué à l'élytre ou en chevauchant une monture combine portée, vitesse et dégâts pour un impact d'entrée de combat.</p>
+      </div>
     </section>
+
     <section id="bestiaire-recent">
       <h2>Bestiaire récent</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Mob</th><th>Comportement</th><th>Contre-stratégie</th><th>Drops</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="item" data-item="brise">Brise</span></td>
+              <td>Mob aérien introduit en 1.21, attaques à distance</td>
+              <td>À vérifier en jeu</td>
+              <td>Tige de brise (breeze rod)</td>
+            </tr>
+            <tr>
+              <td><span class="item" data-item="creaking">Creaking</span></td>
+              <td>Immobile, invulnérable tant qu'il vous observe ; lié à son cœur grinçant</td>
+              <td>Détruire le cœur grinçant à proximité, ou attaquer hors de son champ de vision</td>
+              <td>Résine</td>
+            </tr>
+            <tr>
+              <td><span class="item" data-item="embourbe">Embourbé</span></td>
+              <td>Introduit en 1.21</td>
+              <td>À vérifier en jeu</td>
+              <td>À vérifier en jeu</td>
+            </tr>
+            <tr>
+              <td><span class="item" data-item="desseche">Desséché</span></td>
+              <td>Squelette du désert, tire des flèches de Faiblesse, ne brûle pas au soleil</td>
+              <td>Combat rapproché plutôt qu'échange de tirs</td>
+              <td>À vérifier en jeu</td>
+            </tr>
+            <tr>
+              <td>Cavaliers morts-vivants</td>
+              <td>Cheval zombie monté par un zombie lancier, apparition naturelle</td>
+              <td>Désarçonner le cavalier pour ensuite capturer la monture</td>
+              <td>À vérifier en jeu</td>
+            </tr>
+            <tr>
+              <td>Dromadaire momifié</td>
+              <td>Jusqu'à 2 cavaliers hostiles simultanés</td>
+              <td>Désarçonner les cavaliers avant de traiter la monture</td>
+              <td>À vérifier en jeu</td>
+            </tr>
+            <tr data-version="26.2">
+              <td><span class="item" data-item="cube_de_soufre">Cube de soufre</span></td>
+              <td>Passif, absorbe un bloc → 12 archétypes de comportement (rebond bois, glisse glace, lourd métal, léger laine)</td>
+              <td>Associé à de la TNT : explosif amorçable (redstone/feu, ~6 s) — garder ses distances des variantes chargées</td>
+              <td>Capturable au seau</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+
     <section id="boss">
       <h2>Boss</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Boss</th><th>Tactique clé</th></tr></thead>
+          <tbody>
+            <tr><td>Warden</td><td>Détection au bruit et aux vibrations sculk ; avancer accroupi, étouffer les vibrations à la laine, éviter le combat direct.</td></tr>
+            <tr><td>Wither</td><td>Combattre en arène fermée et surélevée pour limiter les têtes explosives ; la Masse permet des combos aériens efficaces.</td></tr>
+            <tr><td>Ender Dragon</td><td>Détruire les cristaux sur les piliers en priorité, harceler ensuite au sol/à l'arc lors des piqués. Détails complets : <a href="dimensions.html#end">page Dimensions</a>.</td></tr>
+            <tr><td>Elder Guardian</td><td>Boire du lait avant le combat pour annuler l'effet Minage fatigué, privilégier une arme à haut DPS.</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+
     <section id="armures">
       <h2>Armures</h2>
+      <p>La progression classique fer → diamant → netherite reste valable. Le <strong>cuivre</strong> (1.21.9) s'intercale en armure d'appoint pour l'early game, moins durable que le fer mais accessible plus tôt. Les <strong>ornements</strong> (trims) permettent de personnaliser l'apparence de l'armure sans changer ses statistiques.</p>
+      <p>Pour la monture, voir l'<a href="dimensions.html#cavalerie">armure de cheval en netherite</a> sur la page Dimensions.</p>
     </section>
+
     <section id="checklist" data-widget="checklist" data-checklist-page="combat">
       <h2>Checklist « Prêt pour le combat »</h2>
       <noscript><p>Activez JavaScript pour cocher les items de cette checklist.</p></noscript>

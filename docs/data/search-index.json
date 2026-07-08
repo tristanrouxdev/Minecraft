@@ -1,1 +1,47 @@
-[]
+[
+  { "page": "pages/fondations.html", "anchor": "#premiere-nuit", "title": "La première nuit, minute par minute", "keywords": ["première nuit", "bois", "établi", "abri", "outils pierre"] },
+  { "page": "pages/fondations.html", "anchor": "#dormir", "title": "Dormir", "keywords": ["lit", "dormir", "spawn", "lit de paille", "botte de paille"] },
+  { "page": "pages/fondations.html", "anchor": "#faim-saturation", "title": "Faim & saturation", "keywords": ["faim", "saturation", "nourriture", "aliments"] },
+  { "page": "pages/fondations.html", "anchor": "#progression-outils", "title": "Progression des outils", "keywords": ["outils", "bois", "pierre", "cuivre", "fer", "diamant", "netherite"] },
+  { "page": "pages/fondations.html", "anchor": "#bundles", "title": "Bundles (sacs)", "keywords": ["bundle", "sac", "inventaire"] },
+  { "page": "pages/fondations.html", "anchor": "#qol-26-1", "title": "QoL 26.1", "keywords": ["étiquette", "pissenlit doré", "qol", "confort"] },
+  { "page": "pages/fondations.html", "anchor": "#camps-abandonnes", "title": "Premier loot : camps abandonnés", "keywords": ["camp abandonné", "tente", "loot", "coffre", "tonneau"] },
+  { "page": "pages/fondations.html", "anchor": "#checklist", "title": "Checklist Jour 1 → Jour 7", "keywords": ["checklist", "fondations"] },
+
+  { "page": "pages/combat.html", "anchor": "#panorama-armes", "title": "Panorama des armes", "keywords": ["épée", "hache", "arc", "arbalète", "armes"] },
+  { "page": "pages/combat.html", "anchor": "#la-masse", "title": "La Masse", "keywords": ["masse", "mace", "heavy core", "breeze rod", "densité", "brèche", "rafale de vent"] },
+  { "page": "pages/combat.html", "anchor": "#la-lance", "title": "La Lance", "keywords": ["lance", "spear", "estoc", "élan", "brochette"] },
+  { "page": "pages/combat.html", "anchor": "#bestiaire-recent", "title": "Bestiaire récent", "keywords": ["brise", "creaking", "embourbé", "desséché", "cube de soufre", "cheval zombie", "dromadaire momifié"] },
+  { "page": "pages/combat.html", "anchor": "#boss", "title": "Boss", "keywords": ["warden", "wither", "ender dragon", "elder guardian", "boss"] },
+  { "page": "pages/combat.html", "anchor": "#armures", "title": "Armures", "keywords": ["armure", "cuivre", "netherite", "ornements"] },
+  { "page": "pages/combat.html", "anchor": "#checklist", "title": "Checklist Prêt pour le combat", "keywords": ["checklist", "combat"] },
+
+  { "page": "pages/exploration.html", "anchor": "#cartographie-navigation", "title": "Cartographie & navigation", "keywords": ["carte", "boussole", "localisation", "f3"] },
+  { "page": "pages/exploration.html", "anchor": "#chambres-epreuves", "title": "Chambres d'épreuves", "keywords": ["trial chambers", "vault", "clé", "épreuve sinistre"] },
+  { "page": "pages/exploration.html", "anchor": "#cites-anciennes", "title": "Cités anciennes", "keywords": ["cité ancienne", "sculk", "shrieker", "swift sneak", "warden"] },
+  { "page": "pages/exploration.html", "anchor": "#camps-abandonnes", "title": "Camps abandonnés", "keywords": ["camp abandonné", "tente", "loot"] },
+  { "page": "pages/exploration.html", "anchor": "#jardin-pale", "title": "Jardin pâle", "keywords": ["jardin pâle", "creaking", "eyeblossom"] },
+  { "page": "pages/exploration.html", "anchor": "#foret-tachetee", "title": "Forêt tachetée", "keywords": ["forêt tachetée", "peuplier", "polypore", "arbuste rouge"] },
+  { "page": "pages/exploration.html", "anchor": "#cavernes-de-soufre", "title": "Cavernes de soufre", "keywords": ["soufre", "cinabre", "nausée", "geyser"] },
+  { "page": "pages/exploration.html", "anchor": "#montures-logistique", "title": "Montures & logistique", "keywords": ["happy ghast", "nautile", "dromadaire", "cheval", "monture"] },
+  { "page": "pages/exploration.html", "anchor": "#checklist", "title": "Checklist Kit d'expédition", "keywords": ["checklist", "expédition"] },
+
+  { "page": "pages/dimensions.html", "anchor": "#nether-preparation", "title": "Nether — préparation", "keywords": ["nether", "portail", "anti-feu"] },
+  { "page": "pages/dimensions.html", "anchor": "#biomes-bastions-forteresses", "title": "Biomes du Nether, bastions, forteresses", "keywords": ["bastion", "forteresse", "piglin", "blaze"] },
+  { "page": "pages/dimensions.html", "anchor": "#netherite", "title": "Netherite", "keywords": ["netherite", "débris antiques", "gabarit"] },
+  { "page": "pages/dimensions.html", "anchor": "#cavalerie", "title": "Cavalerie", "keywords": ["armure de cheval", "netherite", "monture", "combat monté"] },
+  { "page": "pages/dimensions.html", "anchor": "#end", "title": "End", "keywords": ["end", "stronghold", "ender dragon", "cristaux"] },
+  { "page": "pages/dimensions.html", "anchor": "#post-dragon", "title": "Post-dragon", "keywords": ["gateway", "cité de l'end", "shulker", "élytra"] },
+  { "page": "pages/dimensions.html", "anchor": "#checklist", "title": "Checklists Nether / End", "keywords": ["checklist", "nether", "end"] },
+
+  { "page": "pages/technique.html", "anchor": "#couches-minage", "title": "Couches de minage", "keywords": ["minage", "diamant", "fer", "cuivre", "débris antiques", "y optimal"] },
+  { "page": "pages/technique.html", "anchor": "#fermes-essentielles", "title": "Fermes essentielles par phase", "keywords": ["ferme", "fer", "mobs", "xp", "cultures"] },
+  { "page": "pages/technique.html", "anchor": "#redstone-fondamentaux", "title": "Redstone fondamentaux", "keywords": ["redstone", "comparateur", "observateur"] },
+  { "page": "pages/technique.html", "anchor": "#golem-cuivre-stockage", "title": "Golem de cuivre & stockage", "keywords": ["golem de cuivre", "coffre de cuivre", "tri", "étagère"] },
+  { "page": "pages/technique.html", "anchor": "#ingenierie-soufre", "title": "Ingénierie du soufre", "keywords": ["soufre", "tnt", "geyser", "ascenseur"] },
+  { "page": "pages/technique.html", "anchor": "#confort-build", "title": "Confort & build", "keywords": ["coussin", "lit de paille", "dalle de laine", "escalier de laine"] },
+  { "page": "pages/technique.html", "anchor": "#performances-client", "title": "Performances client", "keywords": ["vulkan", "opengl", "java 25", "performances"] },
+  { "page": "pages/technique.html", "anchor": "#checklist", "title": "Checklist Base autonome", "keywords": ["checklist", "base"] },
+
+  { "page": "pages/changelog.html", "anchor": "", "title": "Changelog", "keywords": ["changelog", "versions", "snapshot"] }
+]

@@ -1,1 +1,116 @@
-[]
+[
+  {
+    "id": "1.21",
+    "label": "1.21 « Tricky Trials »",
+    "status": "stable",
+    "date": null,
+    "summary": "La Masse et ses enchantements exclusifs, Chambres d'épreuves, Brise, Embourbé.",
+    "entries": [
+      { "date": null, "title": "1.21", "notes": ["La Masse (heavy core + breeze rod), dégâts de chute, enchants Densité/Brèche/Rafale de vent", "Chambres d'épreuves (spawners d'épreuve, vaults)", "Nouveaux mobs : Brise, Embourbé"] }
+    ],
+    "links": ["pages/combat.html#la-masse", "pages/exploration.html#chambres-epreuves"]
+  },
+  {
+    "id": "1.21.4",
+    "label": "1.21.4",
+    "status": "stable",
+    "date": null,
+    "summary": "Jardin pâle, Creaking, cœur grinçant et résine.",
+    "entries": [
+      { "date": null, "title": "1.21.4", "notes": ["Biome Jardin pâle", "Creaking, cœur grinçant, résine"] }
+    ],
+    "links": ["pages/exploration.html#jardin-pale", "pages/combat.html#bestiaire-recent"]
+  },
+  {
+    "id": "1.21.6",
+    "label": "1.21.6",
+    "status": "stable",
+    "date": null,
+    "summary": "Happy ghast et barre de localisation.",
+    "entries": [
+      { "date": null, "title": "1.21.6", "notes": ["Happy ghast (monture aérienne)", "Barre de localisation"] }
+    ],
+    "links": ["pages/exploration.html#montures-logistique", "pages/exploration.html#cartographie-navigation"]
+  },
+  {
+    "id": "1.21.9",
+    "label": "1.21.9 « Copper Age »",
+    "status": "stable",
+    "date": null,
+    "summary": "Outils et armure en cuivre, golem de cuivre, coffres de cuivre, étagères.",
+    "entries": [
+      { "date": null, "title": "1.21.9 « Copper Age »", "notes": ["Outils et armure en cuivre", "Golem de cuivre (tri automatique vers coffres de cuivre)", "Coffres de cuivre", "Étagères"] }
+    ],
+    "links": ["pages/fondations.html#progression-outils", "pages/technique.html#golem-cuivre-stockage"]
+  },
+  {
+    "id": "1.21.11",
+    "label": "1.21.11 « Mounts of Mayhem »",
+    "status": "stable",
+    "date": "2025-12-09",
+    "summary": "La Lance, armure de cheval en netherite, nautile, dromadaire momifié, desséché, chevaux zombies montés.",
+    "entries": [
+      { "date": "2025-12-09", "title": "1.21.11 « Mounts of Mayhem »", "notes": [
+        "La Lance : estoc rapide + attaque chargée, enchant exclusif Élan, progrès « Une belle brochette »",
+        "Armure de cheval en netherite (19 points d'armure, résistance au recul)",
+        "Nautile (monture aquatique) et nautile-zombie",
+        "Dromadaire momifié (jusqu'à 2 cavaliers hostiles)",
+        "Desséché (squelette du désert, flèches de faiblesse, ne brûle pas au soleil)",
+        "Chevaux zombies à apparition naturelle montés par des zombies lanciers",
+        "Les montures ne coulent plus et ne paniquent plus"
+      ] }
+    ],
+    "links": ["pages/combat.html#la-lance", "pages/dimensions.html#cavalerie", "pages/exploration.html#montures-logistique"]
+  },
+  {
+    "id": "26.1",
+    "label": "26.1 « Tiny Takeover »",
+    "status": "stable",
+    "date": "2026-03-24",
+    "summary": "Nouveau versioning année.drop.hotfix, pissenlit doré, étiquette craftable, Java 25 requis.",
+    "entries": [
+      { "date": "2026-03-24", "title": "26.1 « Tiny Takeover »", "notes": [
+        "Nouveau schéma de version année.drop.hotfix",
+        "Refonte visuelle/sonore de 30+ bébés mobs",
+        "Pissenlit doré (8 pépites d'or + 1 pissenlit) : fige/relance la croissance des bébés animaux",
+        "Étiquette craftable (1 papier + 1 pépite)",
+        "Son de trompette du bloc musical sur cuivre (timbre selon oxydation)",
+        "Java 25 requis, 4 Go de RAM par défaut",
+        "Découpe directe de la deepslate au tailleur de pierre"
+      ] }
+    ],
+    "links": ["pages/fondations.html#qol-26-1", "pages/technique.html#performances-client"]
+  },
+  {
+    "id": "26.2",
+    "label": "26.2 « Chaos Cubed »",
+    "status": "stable",
+    "date": "2026-06-16",
+    "summary": "Cavernes de soufre, cube de soufre, blocs soufre/cinabre, geysers, moteur Vulkan expérimental.",
+    "entries": [
+      { "date": "2026-06-16", "title": "26.2 « Chaos Cubed »", "notes": [
+        "Cavernes de soufre (gaz toxique → Nausée, geysers, geysers de surface = indice de biome)",
+        "Cube de soufre : passif, absorbe un bloc → 12 archétypes de comportement ; + TNT = piège explosif (~6 s)",
+        "Blocs soufre (jaune) et cinabre (rouge) en sets complets, soufre concentré, pics de soufre",
+        "Geysers constructibles à 4 niveaux de puissance",
+        "Disque « Bounce », liste d'amis intégrée",
+        "Moteur Vulkan expérimental (repli OpenGL automatique)",
+        "Commande /unpublish, lits propulsent à 75 % de la vitesse d'impact",
+        "Araignées des cavernes à apparition naturelle"
+      ] }
+    ],
+    "links": ["pages/exploration.html#cavernes-de-soufre", "pages/technique.html#ingenierie-soufre"]
+  },
+  {
+    "id": "26.3-snapshot",
+    "label": "26.3 (snapshot)",
+    "status": "snapshot",
+    "date": null,
+    "summary": "Forêt tachetée, bois de peuplier, camps abandonnés, escaliers/dalles de laine, coussins, lit de paille.",
+    "entries": [
+      { "date": "2026-06-23", "title": "Snapshot 1", "notes": ["Forêt tachetée + set peuplier", "Camps abandonnés", "Escaliers et dalles de laine"] },
+      { "date": "2026-07-07", "title": "Snapshot 3", "notes": ["Coussins (16 couleurs)", "Lit de paille", "Recettes de potions personnalisables (data packs)"] }
+    ],
+    "links": ["pages/exploration.html#foret-tachetee", "pages/technique.html#confort-build"]
+  }
+]

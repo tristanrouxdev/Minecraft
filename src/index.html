@@ -15,17 +15,45 @@
 
   <section id="sommaire" aria-labelledby="sommaire-title">
     <h2 id="sommaire-title">Sommaire interactif</h2>
-    <div class="card-grid" data-widget="progress-cards"></div>
+    <div class="card-grid" data-widget="progress-cards">
+      <noscript>
+        <div class="slot card"><h3 class="card__title"><a href="pages/fondations.html">Fondations</a></h3><p class="card__summary">Première nuit, faim, outils, camps abandonnés.</p></div>
+        <div class="slot card"><h3 class="card__title"><a href="pages/combat.html">Combat</a></h3><p class="card__summary">Armes, Masse, Lance, bestiaire, boss.</p></div>
+        <div class="slot card"><h3 class="card__title"><a href="pages/exploration.html">Exploration</a></h3><p class="card__summary">Chambres d'épreuves, cités anciennes, biomes récents.</p></div>
+        <div class="slot card"><h3 class="card__title"><a href="pages/dimensions.html">Dimensions</a></h3><p class="card__summary">Nether, netherite, cavalerie, End.</p></div>
+        <div class="slot card"><h3 class="card__title"><a href="pages/technique.html">Technique</a></h3><p class="card__summary">Minage, fermes, redstone, ingénierie du soufre.</p></div>
+        <div class="slot card"><h3 class="card__title"><a href="pages/changelog.html">Changelog</a></h3><p class="card__summary">Historique des versions 1.21 → 26.3.</p></div>
+      </noscript>
+    </div>
   </section>
 
   <section id="frise" aria-labelledby="frise-title">
     <h2 id="frise-title">Frise de progression</h2>
-    <ol class="progress-timeline"></ol>
+    <ol class="progress-timeline" data-widget="progress-timeline">
+      <noscript>
+        <li><a href="pages/fondations.html#premiere-nuit">Jour 1</a></li>
+        <li><a href="pages/fondations.html#progression-outils">Fer/Cuivre</a></li>
+        <li><a href="pages/fondations.html#progression-outils">Enchantement</a></li>
+        <li><a href="pages/dimensions.html#nether-preparation">Nether</a></li>
+        <li><a href="pages/dimensions.html#netherite">Netherite</a></li>
+        <li><a href="pages/exploration.html#chambres-epreuves">Chambres d'épreuves</a></li>
+        <li><a href="pages/exploration.html#cites-anciennes">Cité ancienne</a></li>
+        <li><a href="pages/dimensions.html#end">End</a></li>
+        <li><a href="pages/dimensions.html#post-dragon">Post-game</a></li>
+      </noscript>
+    </ol>
   </section>
 
   <section id="quoi-de-neuf" aria-labelledby="quoi-de-neuf-title">
     <h2 id="quoi-de-neuf-title">Quoi de neuf</h2>
-    <div data-widget="whats-new"></div>
+    <div data-widget="whats-new">
+      <noscript><p>Consultez le <a href="pages/changelog.html">changelog complet</a> pour l'historique des versions.</p></noscript>
+    </div>
+  </section>
+
+  <section id="recherche" aria-labelledby="recherche-title">
+    <h2 id="recherche-title">Recherche</h2>
+    <p>Utilisez la barre de recherche du header pour trouver rapidement une mécanique, une arme ou un bloc dans tout le guide.</p>
   </section>
 </main>
 <!-- @include:footer -->

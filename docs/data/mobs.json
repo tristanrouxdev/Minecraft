@@ -1,1 +1,110 @@
-{}
+{
+  "creaking": {
+    "name": "Creaking",
+    "hp": null,
+    "biome": "Jardin pâle",
+    "danger": 3,
+    "strategy": "Immobile et invulnérable tant qu'il vous observe ; ne peut être détruit qu'en brisant son cœur grinçant à proximité, ou en l'attaquant lorsqu'il ne vous regarde pas.",
+    "drops": ["résine"],
+    "version": "1.21.4"
+  },
+  "embourbe": {
+    "name": "Embourbé",
+    "hp": null,
+    "biome": null,
+    "danger": 2,
+    "strategy": "À vérifier en jeu.",
+    "drops": [],
+    "version": "1.21"
+  },
+  "brise": {
+    "name": "Brise",
+    "hp": null,
+    "biome": null,
+    "danger": 3,
+    "strategy": "À vérifier en jeu.",
+    "drops": ["breeze_rod"],
+    "version": "1.21"
+  },
+  "desseche": {
+    "name": "Desséché",
+    "hp": null,
+    "biome": "Désert",
+    "danger": 2,
+    "strategy": "Tire des flèches de Faiblesse à distance ; contrairement au squelette classique, ne brûle pas au soleil. Rapprochez-vous pour l'achever au corps-à-corps plutôt que de l'affronter à l'arc.",
+    "drops": [],
+    "version": "1.21.11"
+  },
+  "cube_de_soufre": {
+    "name": "Cube de soufre",
+    "hp": null,
+    "biome": "Cavernes de soufre",
+    "danger": 2,
+    "strategy": "Passif : absorbe le premier bloc qui lui est présenté pour adopter l'un de ses 12 comportements (rebond sur bois, glisse sur glace, lourd sur métal, léger sur laine). Associé à de la TNT, il devient un piège explosif amorçable au redstone ou au feu (~6 s) — restez à distance des variantes chargées. Capturable au seau, attirable au pissenlit doré ou à la boule de slime pour les petits cubes.",
+    "drops": [],
+    "version": "26.2"
+  },
+  "warden": {
+    "name": "Warden",
+    "hp": null,
+    "biome": "Cité ancienne",
+    "danger": 5,
+    "strategy": "Aveugle mais détecte le bruit et les vibrations sculk. Avancez accroupi, évitez tout bruit, utilisez la laine pour étouffer les vibrations. Le combat direct est déconseillé : privilégiez la fuite ou les projectiles de diversion.",
+    "drops": [],
+    "version": null
+  },
+  "wither": {
+    "name": "Wither",
+    "hp": null,
+    "biome": null,
+    "danger": 5,
+    "strategy": "Invoqué avec 4 blocs d'âme + 3 crânes de squelette du Wither. Combattez dans une arène fermée et surélevée pour limiter les têtes explosives ; la Masse permet des combos aériens efficaces contre lui.",
+    "drops": [],
+    "version": null
+  },
+  "ender_dragon": {
+    "name": "Ender Dragon",
+    "hp": null,
+    "biome": "End",
+    "danger": 5,
+    "strategy": "Détruisez en priorité les cristaux de l'End sur les piliers (à l'arc, à distance), puis harcelez le dragon au sol ou à l'arc lors de ses piqués. Des lits posés dans l'End explosent et infligent des dégâts.",
+    "drops": [],
+    "version": null
+  },
+  "elder_guardian": {
+    "name": "Elder Guardian",
+    "hp": null,
+    "biome": "Monument océanique",
+    "danger": 4,
+    "strategy": "Inflige l'effet Minage fatigué à distance. Buvez du lait juste avant l'affrontement pour annuler l'effet, et privilégiez une arme à haut DPS.",
+    "drops": [],
+    "version": null
+  },
+  "nautile": {
+    "name": "Nautile",
+    "hp": null,
+    "biome": "Océan",
+    "danger": 1,
+    "strategy": "Monture aquatique apprivoisable au poisson-globe ; permet des déplacements rapides et sûrs sous l'eau.",
+    "drops": [],
+    "version": "1.21.11"
+  },
+  "dromadaire_momifie": {
+    "name": "Dromadaire momifié",
+    "hp": null,
+    "biome": "Désert",
+    "danger": 3,
+    "strategy": "Peut porter jusqu'à 2 cavaliers hostiles simultanément ; désarçonnez les cavaliers avant de vous occuper de la monture elle-même.",
+    "drops": [],
+    "version": "1.21.11"
+  },
+  "cheval_zombie_monte": {
+    "name": "Cheval zombie monté",
+    "hp": null,
+    "biome": null,
+    "danger": 2,
+    "strategy": "Apparaît naturellement monté par un zombie lancier. Désarçonnez le cavalier puis capturez la monture, qui ne coule plus et ne panique plus une fois montée.",
+    "drops": [],
+    "version": "1.21.11"
+  }
+}

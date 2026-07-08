@@ -1,1 +1,34 @@
-{}
+{
+  "diamant": {
+    "name": "Diamant",
+    "yMin": -64,
+    "yMax": 16,
+    "yBest": -59,
+    "note": null,
+    "distribution": [[-64, 8], [-59, 10], [-48, 6], [0, 1]]
+  },
+  "cuivre": {
+    "name": "Cuivre",
+    "yMin": null,
+    "yMax": null,
+    "yBest": 48,
+    "note": "Plage complète à vérifier en jeu.",
+    "distribution": null
+  },
+  "fer": {
+    "name": "Fer",
+    "yMin": null,
+    "yMax": null,
+    "yBest": null,
+    "note": "Distribution à double pic (deux plages de concentration) ; valeurs exactes à vérifier en jeu.",
+    "distribution": null
+  },
+  "debris_antiques": {
+    "name": "Débris antiques",
+    "yMin": 8,
+    "yMax": 22,
+    "yBest": 15,
+    "note": null,
+    "distribution": null
+  }
+}
