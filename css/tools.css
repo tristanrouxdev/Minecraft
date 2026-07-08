@@ -30,12 +30,6 @@
   border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
 }
 
-@media (max-width: 719px) {
-  .search-box__results {
-    width: min(320px, 90vw);
-  }
-}
-
 .search-box__results {
   position: absolute;
   top: calc(100% + 4px);
@@ -50,6 +44,28 @@
   background: var(--surface);
   border: var(--slot-border-width) solid;
   border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+@media (max-width: 719px) {
+  .search-box {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .search-box__input {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Ancré au viewport : la boîte de recherche est trop étroite pour
+     contenir le panneau sans le faire déborder de l'écran. */
+  .search-box__results {
+    position: fixed;
+    left: var(--space-4);
+    right: var(--space-4);
+    top: calc(var(--header-height) + var(--space-1));
+    width: auto;
+  }
 }
 
 .search-box__results[hidden] {

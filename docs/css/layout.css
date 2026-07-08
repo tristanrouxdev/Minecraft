@@ -12,6 +12,12 @@ body {
 .page-main, .page-main-solo { grid-area: main; }
 .site-footer { grid-area: footer; }
 
+/* min-width:auto des items de grid : sans ce reset, la largeur min-content
+   d'un tableau élargit toute la grille au lieu de déclencher .table-scroll. */
+.site-header, .site-nav, .page-main, .page-main-solo, .site-footer {
+  min-width: 0;
+}
+
 /* --- Header --- */
 
 .site-header {
@@ -217,6 +223,14 @@ body {
 
   .site-header__brand-sub {
     display: none;
+  }
+
+  /* La recherche absorbe l'espace restant au lieu d'imposer sa largeur,
+     sinon la barre du header dépasse la largeur de l'écran. */
+  .site-header__tools {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: flex-end;
   }
 
   .site-nav {
