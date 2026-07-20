@@ -43,5 +43,20 @@
   { "page": "pages/technique.html", "anchor": "#performances-client", "title": "Performances client", "keywords": ["vulkan", "opengl", "java 25", "performances"] },
   { "page": "pages/technique.html", "anchor": "#checklist", "title": "Checklist Base autonome", "keywords": ["checklist", "base"] },
 
-  { "page": "pages/changelog.html", "anchor": "", "title": "Changelog", "keywords": ["changelog", "versions", "snapshot"] }
+  { "page": "pages/changelog.html", "anchor": "", "title": "Changelog", "keywords": ["changelog", "versions", "snapshot"] },
+
+  { "page": "pages/enchantements.html", "anchor": "#encyclopedie", "title": "Tous les enchantements", "keywords": ["enchantements", "protection", "tranchant", "raccommodage", "solidité", "id"] },
+  { "page": "pages/enchantements.html", "anchor": "#armure-parfaite", "title": "Armure parfaite", "keywords": ["armure parfaite", "protection", "chute de plume", "solidité", "raccommodage"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-sharpness", "title": "Tranchant", "keywords": ["tranchant", "sharpness"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-protection", "title": "Protection", "keywords": ["protection"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-mending", "title": "Raccommodage", "keywords": ["raccommodage", "mending"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-elan", "title": "Élan", "keywords": ["élan", "lance", "enchantement exclusif"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-density", "title": "Densité", "keywords": ["densité", "density", "masse"] },
+
+  { "page": "pages/fermes.html", "anchor": "#ressources-construction", "title": "Ressources de construction", "keywords": ["cobblestone", "laine", "bambou", "ferme"] },
+  { "page": "pages/fermes.html", "anchor": "#fours-transformation", "title": "Fours et transformation", "keywords": ["four à chaîne", "chain smelting", "hopper"] },
+  { "page": "pages/fermes.html", "anchor": "#fermes-a-mobs", "title": "Fermes à mobs", "keywords": ["ferme de fer", "ferme à or", "ferme à xp", "ferme à enderman"] },
+  { "page": "pages/fermes.html", "anchor": "#cultures-et-nourriture", "title": "Cultures et nourriture", "keywords": ["blé", "carottes", "canne à sucre", "melon", "citrouille", "élevage"] },
+  { "page": "pages/fermes.html", "anchor": "#utilitaires", "title": "Utilitaires", "keywords": ["neige", "glace", "geyser de soufre"] },
+  { "page": "pages/fermes.html", "anchor": "#checklist", "title": "Checklist Fermes de base construites", "keywords": ["checklist", "fermes"] }
 ]

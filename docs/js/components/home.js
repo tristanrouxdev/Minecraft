@@ -3,11 +3,14 @@
 
 (function () {
   var PAGES = [
-    { key: 'fondations', title: 'Fondations', href: 'pages/fondations.html', summary: 'Première nuit, faim, outils, camps abandonnés.' },
-    { key: 'combat', title: 'Combat', href: 'pages/combat.html', summary: 'Armes, Masse, Lance, bestiaire, boss.' },
-    { key: 'exploration', title: 'Exploration', href: 'pages/exploration.html', summary: "Chambres d'épreuves, cités anciennes, biomes récents." },
-    { key: 'dimensions', title: 'Dimensions', href: 'pages/dimensions.html', summary: 'Nether, netherite, cavalerie, End.' },
-    { key: 'technique', title: 'Technique', href: 'pages/technique.html', summary: 'Minage, fermes, redstone, ingénierie du soufre.' }
+    { key: 'fondations', title: 'Fondations', href: 'pages/fondations.html', summary: 'Première nuit, faim, outils, camps abandonnés.', checklist: true },
+    { key: 'combat', title: 'Combat', href: 'pages/combat.html', summary: 'Armes, Masse, Lance, bestiaire, boss.', checklist: true },
+    { key: 'exploration', title: 'Exploration', href: 'pages/exploration.html', summary: "Chambres d'épreuves, cités anciennes, biomes récents.", checklist: true },
+    { key: 'dimensions', title: 'Dimensions', href: 'pages/dimensions.html', summary: 'Nether, netherite, cavalerie, End.', checklist: true },
+    { key: 'technique', title: 'Technique', href: 'pages/technique.html', summary: 'Minage, fermes, redstone, ingénierie du soufre.', checklist: true },
+    { key: 'changelog', title: 'Changelog', href: 'pages/changelog.html', summary: 'Historique des versions 1.21 → 26.3.', checklist: false },
+    { key: 'enchantements', title: 'Enchantements', href: 'pages/enchantements.html', summary: "Encyclopédie filtrable + armure parfaite.", checklist: false },
+    { key: 'fermes', title: 'Fermes', href: 'pages/fermes.html', summary: 'Fermes automatiques par catégorie, du Jour 1 au late-game.', checklist: true }
   ];
 
   var TIMELINE = [
@@ -41,7 +44,6 @@
   function initProgressCards(container) {
     container.innerHTML = '';
     PAGES.forEach(function (page) {
-      var percent = pagePercent(page.key);
       var card = document.createElement('div');
       card.className = 'slot card';
 
@@ -56,29 +58,26 @@
       summary.className = 'card__summary';
       summary.textContent = page.summary;
 
-      var xp = document.createElement('div');
-      xp.className = 'xp-bar is-visible';
-      xp.style.setProperty('--xp-value', percent + '%');
-      var fill = document.createElement('div');
-      fill.className = 'xp-bar__fill';
-      var label = document.createElement('span');
-      label.className = 'xp-bar__label';
-      label.textContent = percent + '%';
-      xp.appendChild(fill);
-      xp.appendChild(label);
-
       card.appendChild(title);
       card.appendChild(summary);
-      card.appendChild(xp);
+
+      if (page.checklist) {
+        var percent = pagePercent(page.key);
+        var xp = document.createElement('div');
+        xp.className = 'xp-bar is-visible';
+        xp.style.setProperty('--xp-value', percent + '%');
+        var fill = document.createElement('div');
+        fill.className = 'xp-bar__fill';
+        var label = document.createElement('span');
+        label.className = 'xp-bar__label';
+        label.textContent = percent + '%';
+        xp.appendChild(fill);
+        xp.appendChild(label);
+        card.appendChild(xp);
+      }
+
       container.appendChild(card);
     });
-
-    var changelogCard = document.createElement('div');
-    changelogCard.className = 'slot card';
-    changelogCard.innerHTML =
-      '<h3 class="card__title"><a href="pages/changelog.html">Changelog</a></h3>' +
-      '<p class="card__summary">Historique des versions 1.21 → 26.3.</p>';
-    container.appendChild(changelogCard);
   }
 
   function initTimeline(container) {

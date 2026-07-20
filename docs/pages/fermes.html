@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technique · Guide Suprême du Survivant</title>
+<title>Fermes · Guide Suprême du Survivant</title>
 <script>
   (function () {
     try {
@@ -62,98 +62,148 @@
 
 <main id="main" class="page-main">
   <div class="page-body">
-  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Technique</nav>
-  <h1>Technique</h1>
-  <p class="page-intro">Minage efficace, fermes automatisées, redstone et ingénierie du soufre : de quoi transformer une base de fortune en installation autonome.</p>
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Fermes</nav>
+  <h1>Fermes</h1>
+  <p class="page-intro">Catalogue des fermes et usines automatiques utiles à une base autonome, classées par catégorie. La <a href="../index.html#frise">frise de progression de l'accueil</a> indique à quel moment du jeu chaque type de ferme devient pertinent : ressources dès le Jour 1, fermes à mobs en mid-game, utilitaires en fin de progression.</p>
 
-  <article>
-    <section id="couches-minage">
-      <h2>Couches de minage</h2>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th>Minerai</th><th>Y optimal</th><th>Plage</th></tr></thead>
-          <tbody>
-            <tr><td>Diamant</td><td>-59</td><td>-64 à 16</td></tr>
-            <tr><td>Fer</td><td>Double pic (valeurs à vérifier en jeu)</td><td>À vérifier en jeu</td></tr>
-            <tr><td>Cuivre</td><td>~48</td><td>À vérifier en jeu</td></tr>
-            <tr><td>Débris antiques</td><td>15</td><td>8 à 22</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div data-widget="mining-calc"></div>
-      <ul>
-        <li><strong>Branch mining</strong> : couloirs parallèles espacés de 2-3 blocs à la couche cible, méthode la plus fiable pour le diamant.</li>
-        <li><strong>Strip 1×2</strong> : galerie simple hauteur 2 pour circuler et miner latéralement, adaptée aux débris antiques en Y15.</li>
-      </ul>
-    </section>
-
-    <section id="fermes-essentielles">
-      <h2>Fermes essentielles par phase</h2>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th>Phase</th><th>Ferme prioritaire</th></tr></thead>
-          <tbody>
-            <tr><td>Early game</td><td>Cultures de base (blé, carottes, pommes de terre)</td></tr>
-            <tr><td>Mid game</td><td>Ferme de fer, ferme à XP simple</td></tr>
-            <tr><td>Late game</td><td>Fermes à mobs de grande capacité, enclos d'élevage automatisés</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Pour l'élevage, le <span class="item" data-item="pissenlit_dore">pissenlit doré</span> permet de figer la croissance de bébés animaux gardés comme reproducteurs ou pour l'exposition, sans qu'ils ne grandissent.</p>
-    </section>
-
-    <section id="redstone-fondamentaux">
-      <h2>Redstone fondamentaux</h2>
-      <ul>
-        <li><strong>Signal</strong> : se propage de bloc en bloc et s'affaiblit avec la distance.</li>
-        <li><strong>Comparateurs</strong> : comparent ou soustraient deux signaux, et peuvent lire le niveau de remplissage d'un contenant.</li>
-        <li><strong>Observateurs</strong> : détectent un changement d'état du bloc devant eux et émettent une impulsion.</li>
-        <li><strong>Circuits types</strong> : porte à impulsion, piège à pression, horloge à répéteurs.</li>
-      </ul>
-    </section>
-
-    <section id="golem-cuivre-stockage">
-      <h2>Golem de cuivre &amp; stockage</h2>
-      <p>Introduit en 1.21.9 « Copper Age », le golem de cuivre trie automatiquement les objets déposés vers des coffres de cuivre correspondants, simplifiant la mise en place d'une salle de stockage triée.</p>
-      <ul>
-        <li>Les <strong>coffres de cuivre</strong> servent de points de dépôt/tri reconnus par les golems.</li>
-        <li>Les <strong>étagères</strong> combinent affichage des objets et échange rapide avec la barre d'action.</li>
-      </ul>
-    </section>
-
-    <section id="ingenierie-soufre">
-      <h2>Ingénierie du soufre</h2>
-      <p>Le <span class="item" data-item="cube_de_soufre">cube de soufre</span> associé à de la TNT devient un piège explosif amorçable au redstone ou au feu, avec un délai d'environ 6 secondes avant détonation.</p>
-      <ul>
-        <li><strong>Geysers constructibles</strong> à 4 niveaux de puissance, utilisables comme ascenseurs à entités ou lanceurs d'items.</li>
-        <li><strong>Soufre concentré + bloc de magma</strong> = geyser fonctionnel, brique de base de ces installations.</li>
-      </ul>
-      <div class="callout callout--astuce">
-        <p><strong>Astuce.</strong> Empiler plusieurs geysers de puissances différentes permet de calibrer précisément la hauteur d'éjection d'un ascenseur à entités.</p>
+  <article data-widget="farm-filter">
+    <section id="ressources-construction">
+      <h2>Ressources de construction</h2>
+      <div class="card-grid">
+        <div class="slot card farm-card" data-farm-category="ressources">
+          <h3 class="card__title">Ferme à pierre (cobblestone)</h3>
+          <span class="difficulty" data-difficulty="1" aria-label="Difficulté 1 sur 4">■□□□</span>
+          <p>Le contact entre une source d'eau et une source de lave correctement positionnées génère de la pierre à répétition ; un piston peut automatiser la récolte, sinon elle se fait manuellement.</p>
+          <p><strong>Matériaux :</strong> eau, lave, piston (optionnel).</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="ressources">
+          <h3 class="card__title">Ferme à laine</h3>
+          <span class="difficulty" data-difficulty="2" aria-label="Difficulté 2 sur 4">■■□□</span>
+          <p>Un enclos de moutons associé à un dispenser chargé de cisailles permet une tonte automatique déclenchée par redstone. Alternative sans élevage : miner des blocs de laine avec un outil Fortune III pour multiplier le rendement.</p>
+          <p><strong>Matériaux :</strong> moutons, dispenser (optionnel), cisailles.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="ressources">
+          <h3 class="card__title">Ferme à bambou</h3>
+          <span class="difficulty" data-difficulty="1" aria-label="Difficulté 1 sur 4">■□□□</span>
+          <p>Le bambou pousse rapidement sans limite de hauteur tant que la tige n'est pas cassée à la base. Un observateur détecte la croissance et déclenche un piston qui coupe la tige, pour une récolte continue et automatique — pratique aussi comme combustible pour le four à chaîne.</p>
+          <p><strong>Matériaux :</strong> bambou, observateurs, pistons.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card card--danger" data-farm-category="ressources">
+          <h3 class="card__title">Multiplication de lave</h3>
+          <span class="badge badge--danger">Retiré / non valide</span>
+          <p>Contrairement à l'eau, la lave ne génère jamais de bloc source infini à partir de deux seaux placés en diagonale sur Java Edition. Ce comportement, parfois vu sur d'anciennes versions Bedrock, a été corrigé. Ne pas construire cette « ferme » sur Java 26.2.</p>
+        </div>
       </div>
     </section>
 
-    <section id="confort-build" data-version="26.3-snapshot">
-      <h2 data-version="26.3-snapshot">Confort &amp; build</h2>
-      <p>Le snapshot 26.3 ajoute plusieurs éléments de confort et de décoration.</p>
-      <ul>
-        <li><span class="item" data-item="coussin">Coussins</span> (16 couleurs, 3 dalles de laine) : posables sur une surface plane, on peut s'asseoir dessus — idéal pour des canapés ou fauteuils de fortune.</li>
-        <li>Escaliers et dalles de laine (16 couleurs) : atténuent le son comme la laine classique, utiles pour camoufler une ferme redstone bruyante ou comme anti-vibration sculk.</li>
-        <li>Palettes de blocs peuplier / soufre / cinabre pour varier les motifs de construction, notamment en chevrons.</li>
-      </ul>
-      <div class="craft-viewer-wrapper" data-widget="craft" data-recipe="coussin"></div>
+    <section id="fours-transformation">
+      <h2>Fours et transformation</h2>
+      <div class="card-grid">
+        <div class="slot card farm-card" data-farm-category="utilitaire">
+          <h3 class="card__title">Four à chaîne (chain smelting)</h3>
+          <span class="difficulty" data-difficulty="2" aria-label="Difficulté 2 sur 4">■■□□</span>
+          <p>Plusieurs fours alignés partagent l'extraction via une chaîne de hoppers : un seul flux de minerai entrant traverse toute la ligne, chaque four cuisant sa charge avant de transmettre le surplus au suivant.</p>
+          <p><strong>Matériaux :</strong> fours en ligne, hopper (trémie), bambou ou charbon.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+      </div>
+      <p>Pour le tri et le stockage automatisés en sortie de four (golem de cuivre, étagères), voir la section <a href="technique.html#golem-cuivre-stockage">Golem de cuivre &amp; stockage</a> de la page Technique — non dupliquée ici.</p>
     </section>
 
-    <section id="performances-client">
-      <h2>Performances client</h2>
-      <ul>
-        <li><strong>Vulkan expérimental</strong> : activable dans les options vidéo, avec repli automatique vers OpenGL en cas d'incompatibilité.</li>
-        <li><strong>26.1</strong> : Java 25 requis, 4 Go de RAM alloués par défaut.</li>
-      </ul>
+    <section id="fermes-a-mobs">
+      <h2>Fermes à mobs</h2>
+      <div class="card-grid">
+        <div class="slot card farm-card" data-farm-category="mobs">
+          <h3 class="card__title">Ferme à fer</h3>
+          <span class="difficulty" data-difficulty="3" aria-label="Difficulté 3 sur 4">■■■□</span>
+          <p>Des villageois logés près de lits sans se voir les uns les autres génèrent périodiquement un iron golem. Un système d'eau achemine le golem vers un point de mise à mort automatique ou semi-automatique.</p>
+          <p><strong>Matériaux :</strong> villageois, lits reconnus, piège à eau, point de mise à mort.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="mobs">
+          <h3 class="card__title">Ferme à or</h3>
+          <span class="difficulty" data-difficulty="4" aria-label="Difficulté 4 sur 4">■■■■</span>
+          <p>Une plateforme de spawn dédiée aux zombified piglins (ou aux piglins selon la méthode), dans le Nether ou au-dessus de l'Overworld, concentre un flux de mobs vers un point de mise à mort qui exploite leur drop d'or.</p>
+          <p><strong>Matériaux :</strong> portail du Nether, plateforme de spawn, piège à eau ou chute.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="xp">
+          <h3 class="card__title">Ferme à XP générique</h3>
+          <span class="difficulty" data-difficulty="3" aria-label="Difficulté 3 sur 4">■■■□</span>
+          <p>Un spawner de donjon exploité avec une cage de mise à mort à proximité, ou une plateforme de spawn classique en hauteur loin des zones éclairées, concentre les mobs hostiles vers un point de collecte d'expérience et de loot.</p>
+          <p><strong>Matériaux :</strong> spawner de donjon ou plateforme en hauteur, couloir de chute ou piège.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="mobs">
+          <h3 class="card__title">Ferme à Enderman</h3>
+          <span class="difficulty" data-difficulty="4" aria-label="Difficulté 4 sur 4">■■■■</span>
+          <p>Une plateforme construite en hauteur dans l'End, hors de portée de recherche des joueurs au sol, profite du taux de spawn élevé des Endermen dans cette dimension pour les canaliser vers un point de mise à mort.</p>
+          <p><strong>Matériaux :</strong> plateforme en hauteur dans l'End, matériaux résistants (obsidienne), système de mise à mort.</p>
+          <div class="callout callout--danger">
+            <p><strong>Danger.</strong> Les Endermen se téléportent en cas d'aggro à distance et infligent de lourds dégâts ; prévoir une armure complète et un accès de repli rapide.</p>
+          </div>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="checklist" data-widget="checklist" data-checklist-page="technique">
-      <h2>Checklist « Base autonome »</h2>
+    <section id="cultures-et-nourriture">
+      <h2>Cultures et nourriture</h2>
+      <div class="card-grid">
+        <div class="slot card farm-card" data-farm-category="cultures">
+          <h3 class="card__title">Ferme automatique de blé/carottes/pommes de terre</h3>
+          <span class="difficulty" data-difficulty="2" aria-label="Difficulté 2 sur 4">■■□□</span>
+          <p>Un carré de terre cultivée irriguée par de l'eau permet la pousse des cultures. Un villageois fermier peut moissonner et replanter automatiquement, ou un système d'observateurs déclenchant des pistons peut récolter dès maturité détectée.</p>
+          <p><strong>Matériaux :</strong> eau, terre cultivée, villageois fermier (optionnel), pistons/observateurs (optionnel).</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="cultures">
+          <h3 class="card__title">Ferme à canne à sucre / cactus</h3>
+          <span class="difficulty" data-difficulty="1" aria-label="Difficulté 1 sur 4">■□□□</span>
+          <p>La canne à sucre et le cactus poussent verticalement sans consommer le bloc d'origine. Un piston placé au-dessus, déclenché en boucle, casse la pousse dès qu'elle dépasse d'un bloc, pour une récolte automatique continue.</p>
+          <p><strong>Matériaux :</strong> canne à sucre ou cactus, pistons, observateurs ou horloge à répéteur.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="cultures">
+          <h3 class="card__title">Ferme à melon/citrouille</h3>
+          <span class="difficulty" data-difficulty="2" aria-label="Difficulté 2 sur 4">■■□□</span>
+          <p>Les tiges de melon et de citrouille produisent un fruit sur un bloc adjacent sans être détruites elles-mêmes. Un observateur détecte l'apparition du fruit et déclenche un piston pour le casser automatiquement.</p>
+          <p><strong>Matériaux :</strong> tige de melon ou de citrouille, terre cultivée, pistons, observateurs.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="nourriture">
+          <h3 class="card__title">Ferme animale de base</h3>
+          <span class="difficulty" data-difficulty="1" aria-label="Difficulté 1 sur 4">■□□□</span>
+          <p>Un enclos clos garni de la nourriture adaptée (blé, carottes, graines…) permet d'élever et de faire reproduire les animaux pour une réserve de nourriture stable. Voir aussi le <span class="item" data-item="pissenlit_dore">pissenlit doré</span>, couvert en page Technique, pour figer la croissance de spécimens choisis.</p>
+          <p><strong>Matériaux :</strong> clôture, portillon, nourriture d'élevage selon l'animal.</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="utilitaires">
+      <h2>Utilitaires</h2>
+      <div class="card-grid">
+        <div class="slot card farm-card" data-farm-category="utilitaire">
+          <h3 class="card__title">Génération de neige/glace</h3>
+          <span class="difficulty" data-difficulty="2" aria-label="Difficulté 2 sur 4">■■□□</span>
+          <p>Dans un biome suffisamment froid, la neige se dépose naturellement et l'eau exposée gèle en glace. Récolter la glace au Toucher de soie évite qu'elle ne redevienne eau, utile pour des routes de glisse ou des structures décoratives.</p>
+          <p><strong>Matériaux :</strong> biome froid ou source de froid, outil <span class="item" data-item="silk_touch">Toucher de soie</span> (pour la glace).</p>
+          <p><strong>Rendement :</strong> à vérifier en jeu.</p>
+        </div>
+        <div class="slot card farm-card" data-farm-category="utilitaire">
+          <h3 class="card__title">Geysers de soufre (ascenseur/lanceur d'items)</h3>
+          <span class="difficulty" data-difficulty="3" aria-label="Difficulté 3 sur 4">■■■□</span>
+          <p>Mécanique entièrement couverte par l'ingénierie du soufre (26.2) — voir <a href="technique.html#ingenierie-soufre">la section dédiée de la page Technique</a> pour le détail de construction, non dupliqué ici.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" data-widget="checklist" data-checklist-page="fermes">
+      <h2>Checklist « Fermes de base construites »</h2>
       <noscript><p>Activez JavaScript pour cocher les items de cette checklist.</p></noscript>
     </section>
   </article>
@@ -1259,8 +1309,7 @@
 <script src="../js/components/version-badge.js"></script>
 <script src="../js/components/toc.js"></script>
 <script src="../js/components/tooltip.js"></script>
-<script src="../js/tools/mining-calc.js"></script>
-<script src="../js/tools/craft-viewer.js"></script>
+<script src="../js/tools/farm-filter.js"></script>
 <script src="../js/tools/checklist.js"></script>
 </body>
 </html>

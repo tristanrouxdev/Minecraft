@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technique · Guide Suprême du Survivant</title>
+<title>Enchantements · Guide Suprême du Survivant</title>
 <script>
   (function () {
     try {
@@ -62,99 +62,63 @@
 
 <main id="main" class="page-main">
   <div class="page-body">
-  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Technique</nav>
-  <h1>Technique</h1>
-  <p class="page-intro">Minage efficace, fermes automatisées, redstone et ingénierie du soufre : de quoi transformer une base de fortune en installation autonome.</p>
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Enchantements</nav>
+  <h1>Enchantements</h1>
+  <p class="page-intro">Un enchantement est un bonus appliqué à un objet via la table d'enchantement (lapis + niveaux d'expérience), l'enclume (combinaison, renommage) ou obtenu directement en loot/pêche/commerce pour les enchantements dits « loot ». L'ID ci-dessous sert aux commandes <code>/enchant</code> ou <code>/give</code>.</p>
 
   <article>
-    <section id="couches-minage">
-      <h2>Couches de minage</h2>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th>Minerai</th><th>Y optimal</th><th>Plage</th></tr></thead>
-          <tbody>
-            <tr><td>Diamant</td><td>-59</td><td>-64 à 16</td></tr>
-            <tr><td>Fer</td><td>Double pic (valeurs à vérifier en jeu)</td><td>À vérifier en jeu</td></tr>
-            <tr><td>Cuivre</td><td>~48</td><td>À vérifier en jeu</td></tr>
-            <tr><td>Débris antiques</td><td>15</td><td>8 à 22</td></tr>
-          </tbody>
-        </table>
+    <section id="encyclopedie">
+      <h2>Tous les enchantements</h2>
+      <div data-widget="enchant-browser"></div>
+      <noscript>
+        <p>Le tableau interactif (filtres, recherche, copie d'ID) nécessite JavaScript. Consultez directement <a href="../data/enchantments.json">data/enchantments.json</a> en attendant.</p>
+      </noscript>
+    </section>
+
+    <section id="armure-parfaite">
+      <h2>Armure parfaite</h2>
+      <div class="card-grid">
+        <div class="slot card">
+          <h3 class="card__title">Casque</h3>
+          <ul>
+            <li><span class="item" data-item="protection">Protection</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+        <div class="slot card">
+          <h3 class="card__title">Plastron</h3>
+          <ul>
+            <li><span class="item" data-item="protection">Protection</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+        <div class="slot card">
+          <h3 class="card__title">Jambières</h3>
+          <ul>
+            <li><span class="item" data-item="protection">Protection</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+        <div class="slot card">
+          <h3 class="card__title">Bottes</h3>
+          <ul>
+            <li><span class="item" data-item="feather_falling">Chute de plume</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
       </div>
-      <div data-widget="mining-calc"></div>
-      <ul>
-        <li><strong>Branch mining</strong> : couloirs parallèles espacés de 2-3 blocs à la couche cible, méthode la plus fiable pour le diamant.</li>
-        <li><strong>Strip 1×2</strong> : galerie simple hauteur 2 pour circuler et miner latéralement, adaptée aux débris antiques en Y15.</li>
-      </ul>
-    </section>
 
-    <section id="fermes-essentielles">
-      <h2>Fermes essentielles par phase</h2>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th>Phase</th><th>Ferme prioritaire</th></tr></thead>
-          <tbody>
-            <tr><td>Early game</td><td>Cultures de base (blé, carottes, pommes de terre)</td></tr>
-            <tr><td>Mid game</td><td>Ferme de fer, ferme à XP simple</td></tr>
-            <tr><td>Late game</td><td>Fermes à mobs de grande capacité, enclos d'élevage automatisés</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Pour l'élevage, le <span class="item" data-item="pissenlit_dore">pissenlit doré</span> permet de figer la croissance de bébés animaux gardés comme reproducteurs ou pour l'exposition, sans qu'ils ne grandissent.</p>
-    </section>
-
-    <section id="redstone-fondamentaux">
-      <h2>Redstone fondamentaux</h2>
-      <ul>
-        <li><strong>Signal</strong> : se propage de bloc en bloc et s'affaiblit avec la distance.</li>
-        <li><strong>Comparateurs</strong> : comparent ou soustraient deux signaux, et peuvent lire le niveau de remplissage d'un contenant.</li>
-        <li><strong>Observateurs</strong> : détectent un changement d'état du bloc devant eux et émettent une impulsion.</li>
-        <li><strong>Circuits types</strong> : porte à impulsion, piège à pression, horloge à répéteurs.</li>
-      </ul>
-    </section>
-
-    <section id="golem-cuivre-stockage">
-      <h2>Golem de cuivre &amp; stockage</h2>
-      <p>Introduit en 1.21.9 « Copper Age », le golem de cuivre trie automatiquement les objets déposés vers des coffres de cuivre correspondants, simplifiant la mise en place d'une salle de stockage triée.</p>
-      <ul>
-        <li>Les <strong>coffres de cuivre</strong> servent de points de dépôt/tri reconnus par les golems.</li>
-        <li>Les <strong>étagères</strong> combinent affichage des objets et échange rapide avec la barre d'action.</li>
-      </ul>
-    </section>
-
-    <section id="ingenierie-soufre">
-      <h2>Ingénierie du soufre</h2>
-      <p>Le <span class="item" data-item="cube_de_soufre">cube de soufre</span> associé à de la TNT devient un piège explosif amorçable au redstone ou au feu, avec un délai d'environ 6 secondes avant détonation.</p>
-      <ul>
-        <li><strong>Geysers constructibles</strong> à 4 niveaux de puissance, utilisables comme ascenseurs à entités ou lanceurs d'items.</li>
-        <li><strong>Soufre concentré + bloc de magma</strong> = geyser fonctionnel, brique de base de ces installations.</li>
-      </ul>
       <div class="callout callout--astuce">
-        <p><strong>Astuce.</strong> Empiler plusieurs geysers de puissances différentes permet de calibrer précisément la hauteur d'éjection d'un ascenseur à entités.</p>
+        <p><strong>Astuce.</strong> Les 4 enchantements de protection (<span class="item" data-item="protection">Protection</span>, <span class="item" data-item="fire_protection">Protection contre le feu</span>, <span class="item" data-item="blast_protection">Protection contre les explosions</span>, <span class="item" data-item="projectile_protection">Protection contre les projectiles</span>) sont mutuellement exclusifs : une pièce d'armure ne peut en porter qu'un seul à la fois. Pour un combat dominé par les explosions (farm de Wither), équiper une armure dédiée avec Protection contre les explosions plutôt que Protection.</p>
       </div>
-    </section>
 
-    <section id="confort-build" data-version="26.3-snapshot">
-      <h2 data-version="26.3-snapshot">Confort &amp; build</h2>
-      <p>Le snapshot 26.3 ajoute plusieurs éléments de confort et de décoration.</p>
-      <ul>
-        <li><span class="item" data-item="coussin">Coussins</span> (16 couleurs, 3 dalles de laine) : posables sur une surface plane, on peut s'asseoir dessus — idéal pour des canapés ou fauteuils de fortune.</li>
-        <li>Escaliers et dalles de laine (16 couleurs) : atténuent le son comme la laine classique, utiles pour camoufler une ferme redstone bruyante ou comme anti-vibration sculk.</li>
-        <li>Palettes de blocs peuplier / soufre / cinabre pour varier les motifs de construction, notamment en chevrons.</li>
-      </ul>
-      <div class="craft-viewer-wrapper" data-widget="craft" data-recipe="coussin"></div>
-    </section>
-
-    <section id="performances-client">
-      <h2>Performances client</h2>
-      <ul>
-        <li><strong>Vulkan expérimental</strong> : activable dans les options vidéo, avec repli automatique vers OpenGL en cas d'incompatibilité.</li>
-        <li><strong>26.1</strong> : Java 25 requis, 4 Go de RAM alloués par défaut.</li>
-      </ul>
-    </section>
-
-    <section id="checklist" data-widget="checklist" data-checklist-page="technique">
-      <h2>Checklist « Base autonome »</h2>
-      <noscript><p>Activez JavaScript pour cocher les items de cette checklist.</p></noscript>
+      <div class="callout callout--astuce">
+        <p><strong>Alternatives utilitaires.</strong> Selon le contexte, substituer un enchantement de confort : casque — <span class="item" data-item="respiration">Respiration</span> ou <span class="item" data-item="aqua_affinity">Affinité aquatique</span> pour l'exploration sous-marine prolongée ; bottes — <span class="item" data-item="depth_strider">Agilité aquatique</span> ou <span class="item" data-item="soul_speed">Vitesse des âmes</span> à la place de Chute de plume, selon que le trajet traverse plutôt l'eau ou le sable/la roche des âmes.</p>
+      </div>
     </section>
   </article>
   </div>
@@ -1259,8 +1223,6 @@
 <script src="../js/components/version-badge.js"></script>
 <script src="../js/components/toc.js"></script>
 <script src="../js/components/tooltip.js"></script>
-<script src="../js/tools/mining-calc.js"></script>
-<script src="../js/tools/craft-viewer.js"></script>
-<script src="../js/tools/checklist.js"></script>
+<script src="../js/tools/enchant-browser.js"></script>
 </body>
 </html>

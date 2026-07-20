@@ -55,6 +55,8 @@
   <a href="../pages/exploration.html">Exploration</a>
   <a href="../pages/dimensions.html">Dimensions</a>
   <a href="../pages/technique.html">Technique</a>
+  <a href="../pages/enchantements.html">Enchantements</a>
+  <a href="../pages/fermes.html">Fermes</a>
   <a href="../pages/changelog.html">Changelog</a>
 </nav>
 
@@ -222,7 +224,659 @@
     { "id": "t07", "label": "Enclos d'élevage avec pissenlit doré", "phase": "Fermes" },
     { "id": "t08", "label": "Coin confort : coussins et lit de paille", "phase": "Confort & build", "version": "26.3-snapshot" },
     { "id": "t09", "label": "Vérifier la config cliente (Vulkan/OpenGL, Java 25)", "phase": "Performances" }
+  ],
+  "fermes": [
+    { "id": "fm01", "label": "Ferme à cobblestone ou pierre fonctionnelle", "phase": "Ressources" },
+    { "id": "fm02", "label": "Ferme à bambou ou à laine fonctionnelle", "phase": "Ressources" },
+    { "id": "fm03", "label": "Four à chaîne opérationnel", "phase": "Transformation" },
+    { "id": "fm04", "label": "Ferme de fer fonctionnelle", "phase": "Fermes à mobs" },
+    { "id": "fm05", "label": "Ferme à XP ou à or fonctionnelle", "phase": "Fermes à mobs" },
+    { "id": "fm06", "label": "Cultures automatisées (blé/carottes/pommes de terre)", "phase": "Cultures" },
+    { "id": "fm07", "label": "Enclos d'élevage de base", "phase": "Nourriture" }
   ]
+}</script>
+<script type="application/json" id="data-enchantments">{
+  "protection": {
+    "id": "minecraft:protection",
+    "name": "Protection",
+    "category": "armure",
+    "maxLevel": 4,
+    "source": "table",
+    "items": ["casque", "plastron", "jambières", "bottes"],
+    "description": "Réduit la plupart des types de dégâts.",
+    "conflicts": ["fire_protection", "blast_protection", "projectile_protection"],
+    "version": "1.0"
+  },
+  "fire_protection": {
+    "id": "minecraft:fire_protection",
+    "name": "Protection contre le feu",
+    "category": "armure",
+    "maxLevel": 4,
+    "source": "table",
+    "items": ["casque", "plastron", "jambières", "bottes"],
+    "description": "Réduit les dégâts de feu et raccourcit la durée de combustion.",
+    "conflicts": ["protection", "blast_protection", "projectile_protection"],
+    "version": "1.0"
+  },
+  "blast_protection": {
+    "id": "minecraft:blast_protection",
+    "name": "Protection contre les explosions",
+    "category": "armure",
+    "maxLevel": 4,
+    "source": "table",
+    "items": ["casque", "plastron", "jambières", "bottes"],
+    "description": "Réduit les dégâts et le recul dus aux explosions.",
+    "conflicts": ["protection", "fire_protection", "projectile_protection"],
+    "version": "1.0"
+  },
+  "projectile_protection": {
+    "id": "minecraft:projectile_protection",
+    "name": "Protection contre les projectiles",
+    "category": "armure",
+    "maxLevel": 4,
+    "source": "table",
+    "items": ["casque", "plastron", "jambières", "bottes"],
+    "description": "Réduit les dégâts des projectiles (flèches, boules de feu…).",
+    "conflicts": ["protection", "fire_protection", "blast_protection"],
+    "version": "1.0"
+  },
+  "feather_falling": {
+    "id": "minecraft:feather_falling",
+    "name": "Chute de plume",
+    "category": "armure",
+    "maxLevel": 4,
+    "source": "table",
+    "items": ["bottes"],
+    "description": "Réduit les dégâts de chute, sans effet sur les autres dégâts.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "respiration": {
+    "id": "minecraft:respiration",
+    "name": "Respiration",
+    "category": "armure",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["casque"],
+    "description": "Prolonge la réserve d'air et améliore la vision sous l'eau.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "aqua_affinity": {
+    "id": "minecraft:aqua_affinity",
+    "name": "Affinité aquatique",
+    "category": "armure",
+    "maxLevel": 1,
+    "source": "table",
+    "items": ["casque"],
+    "description": "Accélère le minage sous l'eau au rythme normal.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "thorns": {
+    "id": "minecraft:thorns",
+    "name": "Épines",
+    "category": "armure",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["casque", "plastron", "jambières", "bottes"],
+    "description": "Renvoie une partie des dégâts subis à l'attaquant, au prix d'une usure accrue de l'armure.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "depth_strider": {
+    "id": "minecraft:depth_strider",
+    "name": "Agilité aquatique",
+    "category": "armure",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["bottes"],
+    "description": "Augmente la vitesse de déplacement dans l'eau.",
+    "conflicts": ["frost_walker"],
+    "version": "1.0"
+  },
+  "frost_walker": {
+    "id": "minecraft:frost_walker",
+    "name": "Pas givrés",
+    "category": "armure",
+    "maxLevel": 2,
+    "source": "loot",
+    "items": ["bottes"],
+    "description": "Gèle l'eau en glace sous les pas du joueur.",
+    "conflicts": ["depth_strider"],
+    "version": "1.0"
+  },
+  "binding_curse": {
+    "id": "minecraft:binding_curse",
+    "name": "Malédiction d'attache",
+    "category": "armure",
+    "maxLevel": 1,
+    "source": "loot",
+    "items": ["casque", "plastron", "jambières", "bottes"],
+    "description": "Empêche de retirer la pièce d'armure tant qu'elle est équipée.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "soul_speed": {
+    "id": "minecraft:soul_speed",
+    "name": "Vitesse des âmes",
+    "category": "armure",
+    "maxLevel": 3,
+    "source": "loot",
+    "items": ["bottes"],
+    "description": "Augmente la vitesse de déplacement sur le sable des âmes et la roche des âmes.",
+    "conflicts": [],
+    "version": "1.16"
+  },
+  "swift_sneak": {
+    "id": "minecraft:swift_sneak",
+    "name": "Discrétion agile",
+    "category": "armure",
+    "maxLevel": 3,
+    "source": "loot",
+    "items": ["jambières"],
+    "description": "Augmente la vitesse de déplacement en position accroupie.",
+    "conflicts": [],
+    "version": "1.19"
+  },
+  "sharpness": {
+    "id": "minecraft:sharpness",
+    "name": "Tranchant",
+    "category": "arme",
+    "maxLevel": 5,
+    "source": "table",
+    "items": ["épée", "hache"],
+    "description": "Augmente les dégâts de mêlée.",
+    "conflicts": ["smite", "bane_of_arthropods", "density", "breach"],
+    "version": "1.0"
+  },
+  "smite": {
+    "id": "minecraft:smite",
+    "name": "Éclair",
+    "category": "arme",
+    "maxLevel": 5,
+    "source": "table",
+    "items": ["épée", "hache"],
+    "description": "Augmente les dégâts contre les morts-vivants.",
+    "conflicts": ["sharpness", "bane_of_arthropods", "density", "breach"],
+    "version": "1.0"
+  },
+  "bane_of_arthropods": {
+    "id": "minecraft:bane_of_arthropods",
+    "name": "Fléau des arthropodes",
+    "category": "arme",
+    "maxLevel": 5,
+    "source": "table",
+    "items": ["épée", "hache"],
+    "description": "Augmente les dégâts contre les arthropodes (araignées, endermites…) et peut les ralentir.",
+    "conflicts": ["sharpness", "smite", "density", "breach"],
+    "version": "1.0"
+  },
+  "knockback": {
+    "id": "minecraft:knockback",
+    "name": "Recul",
+    "category": "arme",
+    "maxLevel": 2,
+    "source": "table",
+    "items": ["épée"],
+    "description": "Augmente le recul infligé aux cibles touchées.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "fire_aspect": {
+    "id": "minecraft:fire_aspect",
+    "name": "Aspect du feu",
+    "category": "arme",
+    "maxLevel": 2,
+    "source": "table",
+    "items": ["épée"],
+    "description": "Enflamme la cible touchée.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "looting": {
+    "id": "minecraft:looting",
+    "name": "Butin",
+    "category": "arme",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["épée"],
+    "description": "Augmente la quantité de butin lâché par les mobs et les chances d'objets rares.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "sweeping_edge": {
+    "id": "minecraft:sweeping_edge",
+    "name": "Tranchant balayeur",
+    "category": "arme",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["épée"],
+    "description": "Augmente les dégâts de l'attaque balayée qui touche les cibles proches.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "unbreaking": {
+    "id": "minecraft:unbreaking",
+    "name": "Solidité",
+    "category": "universel",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["armure", "outils", "armes", "arc", "arbalète", "trident", "canne à pêche"],
+    "description": "Réduit la chance de perdre un point de durabilité à chaque utilisation.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "mending": {
+    "id": "minecraft:mending",
+    "name": "Raccommodage",
+    "category": "universel",
+    "maxLevel": 1,
+    "source": "loot",
+    "items": ["armure", "outils", "armes", "arc", "arbalète", "trident", "canne à pêche"],
+    "description": "Répare l'objet en consommant l'expérience gagnée par le joueur.",
+    "conflicts": ["infinity"],
+    "version": "1.0"
+  },
+  "curse_of_vanishing": {
+    "id": "minecraft:vanishing_curse",
+    "name": "Malédiction de disparition",
+    "category": "universel",
+    "maxLevel": 1,
+    "source": "loot",
+    "items": ["armure", "outils", "armes", "arc", "arbalète", "trident", "canne à pêche"],
+    "description": "L'objet disparaît (au lieu de tomber au sol) à la mort du joueur.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "efficiency": {
+    "id": "minecraft:efficiency",
+    "name": "Efficacité",
+    "category": "outil",
+    "maxLevel": 5,
+    "source": "table",
+    "items": ["pioche", "hache", "pelle", "houe"],
+    "description": "Augmente la vitesse de minage.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "silk_touch": {
+    "id": "minecraft:silk_touch",
+    "name": "Toucher de soie",
+    "category": "outil",
+    "maxLevel": 1,
+    "source": "table",
+    "items": ["pioche", "hache", "pelle"],
+    "description": "Récolte le bloc lui-même plutôt que son loot habituel.",
+    "conflicts": ["fortune"],
+    "version": "1.0"
+  },
+  "fortune": {
+    "id": "minecraft:fortune",
+    "name": "Fortune",
+    "category": "outil",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["pioche", "hache", "pelle"],
+    "description": "Augmente la quantité de certains loots minés.",
+    "conflicts": ["silk_touch"],
+    "version": "1.0"
+  },
+  "power": {
+    "id": "minecraft:power",
+    "name": "Puissance",
+    "category": "arc_arbalete",
+    "maxLevel": 5,
+    "source": "table",
+    "items": ["arc"],
+    "description": "Augmente les dégâts des flèches tirées.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "punch": {
+    "id": "minecraft:punch",
+    "name": "Percussion",
+    "category": "arc_arbalete",
+    "maxLevel": 2,
+    "source": "table",
+    "items": ["arc"],
+    "description": "Augmente le recul infligé par les flèches tirées.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "flame": {
+    "id": "minecraft:flame",
+    "name": "Flamme",
+    "category": "arc_arbalete",
+    "maxLevel": 1,
+    "source": "table",
+    "items": ["arc"],
+    "description": "Enflamme les flèches tirées.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "infinity": {
+    "id": "minecraft:infinity",
+    "name": "Infinité",
+    "category": "arc_arbalete",
+    "maxLevel": 1,
+    "source": "table",
+    "items": ["arc"],
+    "description": "Ne consomme plus de flèches lors du tir (une flèche doit rester dans l'inventaire).",
+    "conflicts": ["mending"],
+    "version": "1.0"
+  },
+  "multishot": {
+    "id": "minecraft:multishot",
+    "name": "Multi-tir",
+    "category": "arc_arbalete",
+    "maxLevel": 1,
+    "source": "table",
+    "items": ["arbalète"],
+    "description": "Tire 3 flèches en une fois pour le coût d'une seule.",
+    "conflicts": ["piercing"],
+    "version": "1.14"
+  },
+  "piercing": {
+    "id": "minecraft:piercing",
+    "name": "Perforation",
+    "category": "arc_arbalete",
+    "maxLevel": 4,
+    "source": "table",
+    "items": ["arbalète"],
+    "description": "Les flèches traversent plusieurs cibles et blocs de moindre épaisseur.",
+    "conflicts": ["multishot"],
+    "version": "1.14"
+  },
+  "quick_charge": {
+    "id": "minecraft:quick_charge",
+    "name": "Recharge rapide",
+    "category": "arc_arbalete",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["arbalète"],
+    "description": "Réduit le temps de rechargement de l'arbalète.",
+    "conflicts": [],
+    "version": "1.14"
+  },
+  "loyalty": {
+    "id": "minecraft:loyalty",
+    "name": "Fidélité",
+    "category": "trident",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["trident"],
+    "description": "Fait revenir le trident vers le joueur après le lancer.",
+    "conflicts": ["riptide"],
+    "version": "1.13"
+  },
+  "impaling": {
+    "id": "minecraft:impaling",
+    "name": "Empalement",
+    "category": "trident",
+    "maxLevel": 5,
+    "source": "table",
+    "items": ["trident"],
+    "description": "Augmente les dégâts contre les mobs aquatiques.",
+    "conflicts": [],
+    "version": "1.13"
+  },
+  "riptide": {
+    "id": "minecraft:riptide",
+    "name": "Ressac",
+    "category": "trident",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["trident"],
+    "description": "Propulse le joueur avec le trident lancé au lieu de le jeter, sous l'eau ou sous la pluie.",
+    "conflicts": ["loyalty", "channeling"],
+    "version": "1.13"
+  },
+  "channeling": {
+    "id": "minecraft:channeling",
+    "name": "Canalisation",
+    "category": "trident",
+    "maxLevel": 1,
+    "source": "loot",
+    "items": ["trident"],
+    "description": "Invoque la foudre sur la cible touchée pendant un orage.",
+    "conflicts": ["riptide"],
+    "version": "1.13"
+  },
+  "luck_of_the_sea": {
+    "id": "minecraft:luck_of_the_sea",
+    "name": "Chance marine",
+    "category": "peche",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["canne à pêche"],
+    "description": "Augmente les chances d'attraper des objets de valeur.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "lure": {
+    "id": "minecraft:lure",
+    "name": "Appât",
+    "category": "peche",
+    "maxLevel": 3,
+    "source": "table",
+    "items": ["canne à pêche"],
+    "description": "Réduit le temps d'attente avant une touche.",
+    "conflicts": [],
+    "version": "1.0"
+  },
+  "density": {
+    "id": "minecraft:density",
+    "name": "Densité",
+    "category": "arme",
+    "maxLevel": 5,
+    "source": "loot",
+    "items": ["masse"],
+    "description": "Augmente les dégâts de la Masse en fonction de la distance de chute.",
+    "conflicts": ["breach", "sharpness", "smite", "bane_of_arthropods"],
+    "version": "1.21"
+  },
+  "breach": {
+    "id": "minecraft:breach",
+    "name": "Brèche",
+    "category": "arme",
+    "maxLevel": 4,
+    "source": "loot",
+    "items": ["masse"],
+    "description": "Réduit l'efficacité de l'armure de la cible face à la Masse.",
+    "conflicts": ["density", "sharpness", "smite", "bane_of_arthropods"],
+    "version": "1.21"
+  },
+  "wind_burst": {
+    "id": "minecraft:wind_charge_burst",
+    "name": "Rafale de vent",
+    "category": "arme",
+    "maxLevel": 3,
+    "source": "loot",
+    "items": ["masse"],
+    "description": "Propulse le joueur dans les airs après un impact au sol avec la Masse, pour enchaîner les charges de vent.",
+    "conflicts": [],
+    "version": "1.21"
+  },
+  "elan": {
+    "id": null,
+    "name": "Élan",
+    "category": "arme",
+    "maxLevel": null,
+    "source": null,
+    "items": ["lance"],
+    "description": "Enchantement exclusif à la Lance, lié à l'attaque chargée.",
+    "conflicts": [],
+    "version": "1.21.11",
+    "note": "ID, niveau max et source (table/loot) à vérifier en jeu — voir README section vérification. Commande suggérée : /give @s enchanted_book[minecraft:stored_enchantments={...}] une fois l'ID confirmé."
+  }
+}</script>
+<script type="application/json" id="data-farms">{
+  "cobblestone": {
+    "name": "Ferme à pierre (cobblestone)",
+    "category": "ressources",
+    "difficulty": 1,
+    "materials": ["eau", "lave", "piston (optionnel)"],
+    "principle": "Le contact entre une source d'eau et une source de lave correctement positionnées génère de la pierre à répétition ; un piston peut automatiser la récolte, sinon elle se fait manuellement.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "laine": {
+    "name": "Ferme à laine",
+    "category": "ressources",
+    "difficulty": 2,
+    "materials": ["moutons", "dispenser (optionnel)", "cisailles"],
+    "principle": "Un enclos de moutons associé à un dispenser chargé de cisailles permet une tonte automatique déclenchée par redstone. Alternative sans élevage : miner des blocs de laine avec un outil Fortune III pour multiplier le rendement.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "bambou": {
+    "name": "Ferme à bambou",
+    "category": "ressources",
+    "difficulty": 1,
+    "materials": ["bambou", "observateurs", "pistons"],
+    "principle": "Le bambou pousse rapidement sans limite de hauteur tant que la tige n'est pas cassée à la base. Un observateur détecte la croissance et déclenche un piston qui coupe la tige, pour une récolte continue et automatique.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu ; sert aussi de combustible au four à chaîne",
+    "version": null,
+    "renvoi": null
+  },
+  "multiplication_lave": {
+    "name": "Multiplication de lave",
+    "category": "ressources",
+    "difficulty": 2,
+    "obsolete": true,
+    "materials": null,
+    "principle": "Mécanique non valide en Java Edition : contrairement à l'eau, la lave ne génère jamais de bloc source infini à partir de deux seaux placés en diagonale. Ce comportement n'a existé de façon fiable que sur certaines versions Bedrock, depuis corrigé.",
+    "yield": null,
+    "note": "Retiré/jamais valide sur Java 26.2 — ne pas construire, conservé ici à titre indicatif.",
+    "version": null,
+    "renvoi": null
+  },
+  "four_a_chaine": {
+    "name": "Four à chaîne (chain smelting)",
+    "category": "utilitaire",
+    "difficulty": 2,
+    "materials": ["fours (en ligne)", "hopper (trémie)", "bambou ou charbon"],
+    "principle": "Plusieurs fours alignés partagent l'extraction via une chaîne de hoppers : un seul flux de minerai entrant traverse toute la ligne, chaque four cuisant sa charge avant de transmettre le surplus au suivant.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": "pages/technique.html#golem-cuivre-stockage"
+  },
+  "fer": {
+    "name": "Ferme à fer",
+    "category": "mobs",
+    "difficulty": 3,
+    "materials": ["villageois", "lits reconnus", "piège à eau", "point de mise à mort"],
+    "principle": "Des villageois logés près de lits sans se voir les uns les autres génèrent périodiquement un iron golem. Un système d'eau achemine le golem vers un point de mise à mort automatique ou semi-automatique.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "or": {
+    "name": "Ferme à or",
+    "category": "mobs",
+    "difficulty": 4,
+    "materials": ["portail du Nether", "plateforme de spawn", "zombified piglins ou piglins", "piège à eau ou chute"],
+    "principle": "Une plateforme de spawn dédiée aux zombified piglins (ou aux piglins selon la méthode), dans le Nether ou au-dessus de l'Overworld, concentre un flux de mobs vers un point de mise à mort qui exploite leur drop d'or.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "xp_generique": {
+    "name": "Ferme à XP générique",
+    "category": "xp",
+    "difficulty": 3,
+    "materials": ["spawner de donjon ou plateforme en hauteur", "couloir de chute ou piège de mise à mort"],
+    "principle": "Un spawner de donjon exploité avec une cage de mise à mort à proximité, ou une plateforme de spawn classique en hauteur loin des zones éclairées, concentre les mobs hostiles vers un point de collecte d'expérience et de loot.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "enderman": {
+    "name": "Ferme à Enderman",
+    "category": "mobs",
+    "difficulty": 4,
+    "materials": ["plateforme en hauteur dans l'End", "matériaux résistants (obsidienne)", "système de mise à mort"],
+    "principle": "Une plateforme construite en hauteur dans l'End, hors de portée de recherche des joueurs au sol, profite du taux de spawn élevé des Endermen dans cette dimension pour les canaliser vers un point de mise à mort.",
+    "yield": null,
+    "note": "Danger élevé : les Endermen se téléportent en cas d'aggro à distance et infligent de lourds dégâts ; prévoir une armure complète et un accès de repli rapide. Ordre de grandeur du rendement à vérifier en jeu.",
+    "version": null,
+    "renvoi": null
+  },
+  "cultures_base": {
+    "name": "Ferme automatique de blé/carottes/pommes de terre",
+    "category": "cultures",
+    "difficulty": 2,
+    "materials": ["eau", "terre cultivée", "villageois fermier (optionnel)", "pistons/observateurs (optionnel)"],
+    "principle": "Un carré de terre cultivée irriguée par de l'eau permet la pousse des cultures. Un villageois fermier peut moissonner et replanter automatiquement, ou un système d'observateurs déclenchant des pistons peut récolter dès maturité détectée.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "canne_cactus": {
+    "name": "Ferme à canne à sucre / cactus",
+    "category": "cultures",
+    "difficulty": 1,
+    "materials": ["canne à sucre ou cactus", "pistons", "observateurs ou horloge à répéteur"],
+    "principle": "La canne à sucre et le cactus poussent verticalement sans consommer le bloc d'origine. Un piston placé au-dessus, déclenché en boucle, casse la pousse dès qu'elle dépasse d'un bloc, pour une récolte automatique continue.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "melon_citrouille": {
+    "name": "Ferme à melon/citrouille",
+    "category": "cultures",
+    "difficulty": 2,
+    "materials": ["tige de melon ou de citrouille", "terre cultivée", "pistons", "observateurs"],
+    "principle": "Les tiges de melon et de citrouille produisent un fruit sur un bloc adjacent sans être détruites elles-mêmes. Un observateur détecte l'apparition du fruit et déclenche un piston pour le casser automatiquement.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "elevage_base": {
+    "name": "Ferme animale de base",
+    "category": "nourriture",
+    "difficulty": 1,
+    "materials": ["clôture", "portillon", "nourriture d'élevage selon l'animal"],
+    "principle": "Un enclos clos garni de la nourriture adaptée (blé, carottes, graines…) permet d'élever et de faire reproduire les animaux pour une réserve de nourriture stable.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu ; le pissenlit doré permet de figer la croissance de spécimens choisis",
+    "version": null,
+    "renvoi": "pages/technique.html#fermes-essentielles"
+  },
+  "neige_glace": {
+    "name": "Génération de neige/glace",
+    "category": "utilitaire",
+    "difficulty": 2,
+    "materials": ["biome froid ou source de froid", "outil Toucher de soie (pour la glace)"],
+    "principle": "Dans un biome suffisamment froid, la neige se dépose naturellement et l'eau exposée gèle en glace. Récolter la glace au Toucher de soie évite qu'elle ne redevienne eau, utile pour des routes de glisse ou des structures décoratives.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "geysers_soufre": {
+    "name": "Geysers de soufre (ascenseur/lanceur d'items)",
+    "category": "utilitaire",
+    "difficulty": 3,
+    "materials": null,
+    "principle": "Mécanique entièrement couverte par l'ingénierie du soufre (26.2) — voir la page Technique, pas de contenu dupliqué ici.",
+    "yield": null,
+    "version": "26.2",
+    "renvoi": "pages/technique.html#ingenierie-soufre"
+  }
 }</script>
 <script type="application/json" id="data-mobs">{
   "creaking": {
@@ -470,7 +1124,22 @@
   { "page": "pages/technique.html", "anchor": "#performances-client", "title": "Performances client", "keywords": ["vulkan", "opengl", "java 25", "performances"] },
   { "page": "pages/technique.html", "anchor": "#checklist", "title": "Checklist Base autonome", "keywords": ["checklist", "base"] },
 
-  { "page": "pages/changelog.html", "anchor": "", "title": "Changelog", "keywords": ["changelog", "versions", "snapshot"] }
+  { "page": "pages/changelog.html", "anchor": "", "title": "Changelog", "keywords": ["changelog", "versions", "snapshot"] },
+
+  { "page": "pages/enchantements.html", "anchor": "#encyclopedie", "title": "Tous les enchantements", "keywords": ["enchantements", "protection", "tranchant", "raccommodage", "solidité", "id"] },
+  { "page": "pages/enchantements.html", "anchor": "#armure-parfaite", "title": "Armure parfaite", "keywords": ["armure parfaite", "protection", "chute de plume", "solidité", "raccommodage"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-sharpness", "title": "Tranchant", "keywords": ["tranchant", "sharpness"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-protection", "title": "Protection", "keywords": ["protection"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-mending", "title": "Raccommodage", "keywords": ["raccommodage", "mending"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-elan", "title": "Élan", "keywords": ["élan", "lance", "enchantement exclusif"] },
+  { "page": "pages/enchantements.html", "anchor": "#ench-density", "title": "Densité", "keywords": ["densité", "density", "masse"] },
+
+  { "page": "pages/fermes.html", "anchor": "#ressources-construction", "title": "Ressources de construction", "keywords": ["cobblestone", "laine", "bambou", "ferme"] },
+  { "page": "pages/fermes.html", "anchor": "#fours-transformation", "title": "Fours et transformation", "keywords": ["four à chaîne", "chain smelting", "hopper"] },
+  { "page": "pages/fermes.html", "anchor": "#fermes-a-mobs", "title": "Fermes à mobs", "keywords": ["ferme de fer", "ferme à or", "ferme à xp", "ferme à enderman"] },
+  { "page": "pages/fermes.html", "anchor": "#cultures-et-nourriture", "title": "Cultures et nourriture", "keywords": ["blé", "carottes", "canne à sucre", "melon", "citrouille", "élevage"] },
+  { "page": "pages/fermes.html", "anchor": "#utilitaires", "title": "Utilitaires", "keywords": ["neige", "glace", "geyser de soufre"] },
+  { "page": "pages/fermes.html", "anchor": "#checklist", "title": "Checklist Fermes de base construites", "keywords": ["checklist", "fermes"] }
 ]</script>
 <script type="application/json" id="data-versions">[
   {

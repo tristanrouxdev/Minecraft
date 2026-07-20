@@ -15,7 +15,7 @@ Le site généré dans `docs/` fonctionne aussi bien ouvert directement dans un 
 
 ## Arborescence
 
-- `src/` — source de vérité éditable (pages HTML + partials).
+- `src/` — source de vérité éditable (pages HTML + partials). Pages : `index.html`, `pages/fondations.html`, `pages/combat.html`, `pages/exploration.html`, `pages/dimensions.html`, `pages/technique.html`, `pages/enchantements.html`, `pages/fermes.html`, `pages/changelog.html`.
 - `docs/` — sortie générée, **ne jamais éditer à la main**.
 - `css/`, `js/`, `data/`, `assets/` — copiés tels quels dans `docs/` au build.
 - `scripts/build.mjs` — générateur (includes de partials + variables `{{title}}`/`{{depth}}`).
@@ -35,6 +35,14 @@ Le site généré dans `docs/` fonctionne aussi bien ouvert directement dans un 
 - `assets/fonts/monocraft.woff2` : police Monocraft (SIL OFL, voir `LICENSE-monocraft.txt` à côté), auto-hébergée.
 - Icônes d'items : placeholders CSS (`.item-icon`, carré 32px + initiale + couleur de rareté), aucune texture Mojang. À remplacer par une vraie sprite sheet (`assets/img/icons/`) si besoin, via `background-position`.
 - `assets/img/screenshots/` : vide pour l'instant. Toute capture ajoutée doit être en WebP et utiliser `<img loading="lazy">`.
+
+## Vérification manuelle : ID de l'enchantement de la Lance (Élan)
+
+L'entrée `elan` dans `data/enchantments.json` a son champ `id` à `null` : l'identifiant exact de l'enchantement exclusif de la Lance (1.21.11) n'a pas été confirmé. Pour le vérifier en jeu :
+
+1. Ouvrir la console de commandes en mode créatif/triche activée.
+2. Essayer `/give @s enchanted_book[minecraft:stored_enchantments={elan:1}]` en testant les variantes probables d'ID (`elan`, `momentum`, `charge`, etc.) jusqu'à obtenir un livre enchanté valide, ou consulter `/enchant` avec autocomplétion (Tab) sur une Lance en main pour lister les IDs proposés par le jeu.
+3. Une fois l'ID confirmé, mettre à jour `id` (et `maxLevel`/`source` si observés) dans `data/enchantments.json`, retirer le champ `note` correspondant, puis `npm run build`.
 
 ## Mettre à jour le contenu snapshot (26.3 → futur drop)
 
