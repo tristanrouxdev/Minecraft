@@ -55,5 +55,14 @@
     { "id": "t07", "label": "Enclos d'élevage avec pissenlit doré", "phase": "Fermes" },
     { "id": "t08", "label": "Coin confort : coussins et lit de paille", "phase": "Confort & build", "version": "26.3-snapshot" },
     { "id": "t09", "label": "Vérifier la config cliente (Vulkan/OpenGL, Java 25)", "phase": "Performances" }
+  ],
+  "fermes": [
+    { "id": "fm01", "label": "Ferme à cobblestone ou pierre fonctionnelle", "phase": "Ressources" },
+    { "id": "fm02", "label": "Ferme à bambou ou à laine fonctionnelle", "phase": "Ressources" },
+    { "id": "fm03", "label": "Four à chaîne opérationnel", "phase": "Transformation" },
+    { "id": "fm04", "label": "Ferme de fer fonctionnelle", "phase": "Fermes à mobs" },
+    { "id": "fm05", "label": "Ferme à XP ou à or fonctionnelle", "phase": "Fermes à mobs" },
+    { "id": "fm06", "label": "Cultures automatisées (blé/carottes/pommes de terre)", "phase": "Cultures" },
+    { "id": "fm07", "label": "Enclos d'élevage de base", "phase": "Nourriture" }
   ]
 }

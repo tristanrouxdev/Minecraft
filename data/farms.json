@@ -1,0 +1,167 @@
+{
+  "cobblestone": {
+    "name": "Ferme à pierre (cobblestone)",
+    "category": "ressources",
+    "difficulty": 1,
+    "materials": ["eau", "lave", "piston (optionnel)"],
+    "principle": "Le contact entre une source d'eau et une source de lave correctement positionnées génère de la pierre à répétition ; un piston peut automatiser la récolte, sinon elle se fait manuellement.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "laine": {
+    "name": "Ferme à laine",
+    "category": "ressources",
+    "difficulty": 2,
+    "materials": ["moutons", "dispenser (optionnel)", "cisailles"],
+    "principle": "Un enclos de moutons associé à un dispenser chargé de cisailles permet une tonte automatique déclenchée par redstone. Alternative sans élevage : miner des blocs de laine avec un outil Fortune III pour multiplier le rendement.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "bambou": {
+    "name": "Ferme à bambou",
+    "category": "ressources",
+    "difficulty": 1,
+    "materials": ["bambou", "observateurs", "pistons"],
+    "principle": "Le bambou pousse rapidement sans limite de hauteur tant que la tige n'est pas cassée à la base. Un observateur détecte la croissance et déclenche un piston qui coupe la tige, pour une récolte continue et automatique.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu ; sert aussi de combustible au four à chaîne",
+    "version": null,
+    "renvoi": null
+  },
+  "multiplication_lave": {
+    "name": "Multiplication de lave",
+    "category": "ressources",
+    "difficulty": 2,
+    "obsolete": true,
+    "materials": null,
+    "principle": "Mécanique non valide en Java Edition : contrairement à l'eau, la lave ne génère jamais de bloc source infini à partir de deux seaux placés en diagonale. Ce comportement n'a existé de façon fiable que sur certaines versions Bedrock, depuis corrigé.",
+    "yield": null,
+    "note": "Retiré/jamais valide sur Java 26.2 — ne pas construire, conservé ici à titre indicatif.",
+    "version": null,
+    "renvoi": null
+  },
+  "four_a_chaine": {
+    "name": "Four à chaîne (chain smelting)",
+    "category": "utilitaire",
+    "difficulty": 2,
+    "materials": ["fours (en ligne)", "hopper (trémie)", "bambou ou charbon"],
+    "principle": "Plusieurs fours alignés partagent l'extraction via une chaîne de hoppers : un seul flux de minerai entrant traverse toute la ligne, chaque four cuisant sa charge avant de transmettre le surplus au suivant.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": "pages/technique.html#golem-cuivre-stockage"
+  },
+  "fer": {
+    "name": "Ferme à fer",
+    "category": "mobs",
+    "difficulty": 3,
+    "materials": ["villageois", "lits reconnus", "piège à eau", "point de mise à mort"],
+    "principle": "Des villageois logés près de lits sans se voir les uns les autres génèrent périodiquement un iron golem. Un système d'eau achemine le golem vers un point de mise à mort automatique ou semi-automatique.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "or": {
+    "name": "Ferme à or",
+    "category": "mobs",
+    "difficulty": 4,
+    "materials": ["portail du Nether", "plateforme de spawn", "zombified piglins ou piglins", "piège à eau ou chute"],
+    "principle": "Une plateforme de spawn dédiée aux zombified piglins (ou aux piglins selon la méthode), dans le Nether ou au-dessus de l'Overworld, concentre un flux de mobs vers un point de mise à mort qui exploite leur drop d'or.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "xp_generique": {
+    "name": "Ferme à XP générique",
+    "category": "xp",
+    "difficulty": 3,
+    "materials": ["spawner de donjon ou plateforme en hauteur", "couloir de chute ou piège de mise à mort"],
+    "principle": "Un spawner de donjon exploité avec une cage de mise à mort à proximité, ou une plateforme de spawn classique en hauteur loin des zones éclairées, concentre les mobs hostiles vers un point de collecte d'expérience et de loot.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "enderman": {
+    "name": "Ferme à Enderman",
+    "category": "mobs",
+    "difficulty": 4,
+    "materials": ["plateforme en hauteur dans l'End", "matériaux résistants (obsidienne)", "système de mise à mort"],
+    "principle": "Une plateforme construite en hauteur dans l'End, hors de portée de recherche des joueurs au sol, profite du taux de spawn élevé des Endermen dans cette dimension pour les canaliser vers un point de mise à mort.",
+    "yield": null,
+    "note": "Danger élevé : les Endermen se téléportent en cas d'aggro à distance et infligent de lourds dégâts ; prévoir une armure complète et un accès de repli rapide. Ordre de grandeur du rendement à vérifier en jeu.",
+    "version": null,
+    "renvoi": null
+  },
+  "cultures_base": {
+    "name": "Ferme automatique de blé/carottes/pommes de terre",
+    "category": "cultures",
+    "difficulty": 2,
+    "materials": ["eau", "terre cultivée", "villageois fermier (optionnel)", "pistons/observateurs (optionnel)"],
+    "principle": "Un carré de terre cultivée irriguée par de l'eau permet la pousse des cultures. Un villageois fermier peut moissonner et replanter automatiquement, ou un système d'observateurs déclenchant des pistons peut récolter dès maturité détectée.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "canne_cactus": {
+    "name": "Ferme à canne à sucre / cactus",
+    "category": "cultures",
+    "difficulty": 1,
+    "materials": ["canne à sucre ou cactus", "pistons", "observateurs ou horloge à répéteur"],
+    "principle": "La canne à sucre et le cactus poussent verticalement sans consommer le bloc d'origine. Un piston placé au-dessus, déclenché en boucle, casse la pousse dès qu'elle dépasse d'un bloc, pour une récolte automatique continue.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "melon_citrouille": {
+    "name": "Ferme à melon/citrouille",
+    "category": "cultures",
+    "difficulty": 2,
+    "materials": ["tige de melon ou de citrouille", "terre cultivée", "pistons", "observateurs"],
+    "principle": "Les tiges de melon et de citrouille produisent un fruit sur un bloc adjacent sans être détruites elles-mêmes. Un observateur détecte l'apparition du fruit et déclenche un piston pour le casser automatiquement.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "elevage_base": {
+    "name": "Ferme animale de base",
+    "category": "nourriture",
+    "difficulty": 1,
+    "materials": ["clôture", "portillon", "nourriture d'élevage selon l'animal"],
+    "principle": "Un enclos clos garni de la nourriture adaptée (blé, carottes, graines…) permet d'élever et de faire reproduire les animaux pour une réserve de nourriture stable.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu ; le pissenlit doré permet de figer la croissance de spécimens choisis",
+    "version": null,
+    "renvoi": "pages/technique.html#fermes-essentielles"
+  },
+  "neige_glace": {
+    "name": "Génération de neige/glace",
+    "category": "utilitaire",
+    "difficulty": 2,
+    "materials": ["biome froid ou source de froid", "outil Toucher de soie (pour la glace)"],
+    "principle": "Dans un biome suffisamment froid, la neige se dépose naturellement et l'eau exposée gèle en glace. Récolter la glace au Toucher de soie évite qu'elle ne redevienne eau, utile pour des routes de glisse ou des structures décoratives.",
+    "yield": null,
+    "note": "ordre de grandeur à vérifier en jeu",
+    "version": null,
+    "renvoi": null
+  },
+  "geysers_soufre": {
+    "name": "Geysers de soufre (ascenseur/lanceur d'items)",
+    "category": "utilitaire",
+    "difficulty": 3,
+    "materials": null,
+    "principle": "Mécanique entièrement couverte par l'ingénierie du soufre (26.2) — voir la page Technique, pas de contenu dupliqué ici.",
+    "yield": null,
+    "version": "26.2",
+    "renvoi": "pages/technique.html#ingenierie-soufre"
+  }
+}
