@@ -1,0 +1,81 @@
+<!-- @page title="Enchantements" depth="../" -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- @include:head -->
+</head>
+<body>
+<!-- @include:header -->
+<main id="main" class="page-main">
+  <div class="page-body">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a> <span aria-hidden="true">›</span> Enchantements</nav>
+  <h1>Enchantements</h1>
+  <p class="page-intro">Un enchantement est un bonus appliqué à un objet via la table d'enchantement (lapis + niveaux d'expérience), l'enclume (combinaison, renommage) ou obtenu directement en loot/pêche/commerce pour les enchantements dits « loot ». L'ID ci-dessous sert aux commandes <code>/enchant</code> ou <code>/give</code>.</p>
+
+  <article>
+    <section id="encyclopedie">
+      <h2>Tous les enchantements</h2>
+      <div data-widget="enchant-browser"></div>
+      <noscript>
+        <p>Le tableau interactif (filtres, recherche, copie d'ID) nécessite JavaScript. Consultez directement <a href="../data/enchantments.json">data/enchantments.json</a> en attendant.</p>
+      </noscript>
+    </section>
+
+    <section id="armure-parfaite">
+      <h2>Armure parfaite</h2>
+      <div class="card-grid">
+        <div class="slot card">
+          <h3 class="card__title">Casque</h3>
+          <ul>
+            <li><span class="item" data-item="protection">Protection</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+        <div class="slot card">
+          <h3 class="card__title">Plastron</h3>
+          <ul>
+            <li><span class="item" data-item="protection">Protection</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+        <div class="slot card">
+          <h3 class="card__title">Jambières</h3>
+          <ul>
+            <li><span class="item" data-item="protection">Protection</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+        <div class="slot card">
+          <h3 class="card__title">Bottes</h3>
+          <ul>
+            <li><span class="item" data-item="feather_falling">Chute de plume</span> IV</li>
+            <li><span class="item" data-item="unbreaking">Solidité</span> III</li>
+            <li><span class="item" data-item="mending">Raccommodage</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout callout--astuce">
+        <p><strong>Astuce.</strong> Les 4 enchantements de protection (<span class="item" data-item="protection">Protection</span>, <span class="item" data-item="fire_protection">Protection contre le feu</span>, <span class="item" data-item="blast_protection">Protection contre les explosions</span>, <span class="item" data-item="projectile_protection">Protection contre les projectiles</span>) sont mutuellement exclusifs : une pièce d'armure ne peut en porter qu'un seul à la fois. Pour un combat dominé par les explosions (farm de Wither), équiper une armure dédiée avec Protection contre les explosions plutôt que Protection.</p>
+      </div>
+
+      <div class="callout callout--astuce">
+        <p><strong>Alternatives utilitaires.</strong> Selon le contexte, substituer un enchantement de confort : casque — <span class="item" data-item="respiration">Respiration</span> ou <span class="item" data-item="aqua_affinity">Affinité aquatique</span> pour l'exploration sous-marine prolongée ; bottes — <span class="item" data-item="depth_strider">Agilité aquatique</span> ou <span class="item" data-item="soul_speed">Vitesse des âmes</span> à la place de Chute de plume, selon que le trajet traverse plutôt l'eau ou le sable/la roche des âmes.</p>
+      </div>
+    </section>
+  </article>
+  </div>
+  <nav class="toc" data-widget="toc" aria-label="Sommaire de la page"></nav>
+</main>
+<!-- @include:footer -->
+<script src="../js/main.js"></script>
+<script src="../js/components/search.js"></script>
+<script src="../js/components/version-badge.js"></script>
+<script src="../js/components/toc.js"></script>
+<script src="../js/components/tooltip.js"></script>
+<script src="../js/tools/enchant-browser.js"></script>
+</body>
+</html>
