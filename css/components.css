@@ -94,6 +94,11 @@
   border-color: var(--accent-amethyst);
 }
 
+.badge--danger {
+  color: var(--accent-redstone);
+  border-color: var(--accent-redstone);
+}
+
 /* --- Encadrés éditoriaux --- */
 
 .callout {

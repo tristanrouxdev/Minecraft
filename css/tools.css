@@ -263,6 +263,125 @@
   font-size: 0.9rem;
 }
 
+/* --- Tabs génériques (enchant-browser, farm-filter) --- */
+
+.tab-btn {
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+
+.tab-btn:hover {
+  color: var(--text);
+}
+
+.tab-btn.is-active {
+  color: var(--accent-emerald);
+  border-color: var(--accent-emerald);
+}
+
+/* --- Encyclopédie d'enchantements --- */
+
+.enchant-browser {
+  padding: var(--space-4);
+}
+
+.enchant-browser__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.enchant-browser__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.enchant-browser__loot-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+}
+
+.enchant-browser__search {
+  padding: var(--space-2);
+  background: var(--surface-2);
+  border: var(--slot-border-width) solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+  min-width: 200px;
+  flex: 1 1 200px;
+  color: var(--text);
+}
+
+.enchant-browser__counter {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin: 0 0 var(--space-3);
+}
+
+.enchant-browser__row-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  padding: 0;
+}
+
+.enchant-browser__copy {
+  margin-left: var(--space-2);
+  font-size: 0.7rem;
+  padding: 2px var(--space-2);
+}
+
+.enchant-browser__detail-row td {
+  background: var(--surface-2);
+  font-size: 0.85rem;
+}
+
+.enchant-browser__note {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+/* --- Filtre de fermes --- */
+
+.farm-filter__tabs {
+  margin-bottom: var(--space-5);
+}
+
+.difficulty {
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: var(--accent-copper);
+  display: inline-block;
+  margin: var(--space-1) 0;
+}
+
+.farm-card details {
+  margin-top: var(--space-3);
+  border-top: 1px solid var(--surface-2);
+  padding-top: var(--space-3);
+}
+
+.farm-card summary {
+  cursor: pointer;
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+}
+
 /* --- Craft viewer (grille d'établi) --- */
 
 .craft-viewer {
