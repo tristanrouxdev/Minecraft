@@ -79,7 +79,9 @@ function applyVars(html, vars) {
 
 function buildPages() {
   const pageFiles = listFilesRecursive(SRC).filter(
-    (f) => extname(f) === '.html' && !f.startsWith(PARTIALS_DIR + '/')
+    // dirname() plutôt que startsWith(PARTIALS_DIR + '/') : le séparateur en dur
+    // ne matche pas les chemins Windows (backslash), ce qui laissait les partials fuiter dans docs/.
+    (f) => extname(f) === '.html' && dirname(f) !== PARTIALS_DIR
   );
   const dataScripts = buildDataScripts();
   for (const pageFile of pageFiles) {
