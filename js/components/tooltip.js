@@ -1,15 +1,20 @@
-// Tooltip d'item : .item[data-item] → carte flottante résolue via recipes.json / mobs.json.
-// Fonctionne au hover et au focus clavier.
+// Tooltip d'item : .item[data-item] → carte flottante résolue via recipes.json / mobs.json /
+// enchantments.json / farms.json. Fonctionne au hover et au focus clavier.
+// Ordre de résolution (le premier match gagne) : recipes -> mobs -> enchantments -> farms.
 
 (function () {
   var recipes = GS.getData('recipes') || {};
   var mobs = GS.getData('mobs') || {};
+  var enchantments = GS.getData('enchantments') || {};
+  var farms = GS.getData('farms') || {};
   var card = null;
   var hideTimeout = null;
 
   function resolveEntry(id) {
     if (recipes[id]) return { kind: 'recipe', data: recipes[id] };
     if (mobs[id]) return { kind: 'mob', data: mobs[id] };
+    if (enchantments[id]) return { kind: 'enchantment', data: enchantments[id] };
+    if (farms[id]) return { kind: 'farm', data: farms[id] };
     return null;
   }
 
@@ -21,11 +26,15 @@
     var body = document.createElement('p');
     if (entry.kind === 'recipe') {
       body.textContent = entry.data.note || (entry.data.version ? 'Introduit en ' + entry.data.version + '.' : '');
-    } else {
+    } else if (entry.kind === 'mob') {
       var bits = [];
       if (entry.data.biome) bits.push(entry.data.biome);
       if (entry.data.strategy) bits.push(entry.data.strategy);
       body.textContent = bits.join(' — ');
+    } else if (entry.kind === 'enchantment') {
+      body.textContent = entry.data.description || '';
+    } else {
+      body.textContent = entry.data.principle || '';
     }
     return [title, body];
   }
